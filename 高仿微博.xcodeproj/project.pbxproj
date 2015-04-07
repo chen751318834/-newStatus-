@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B06F0BC1AD3F22B0032E46E /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B06F0BB1AD3F22B0032E46E /* UIBarButtonItem+Extension.m */; };
+		4B06F0BF1AD3F44B0032E46E /* RCTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B06F0BE1AD3F44B0032E46E /* RCTitleButton.m */; };
+		4B63BC621AD3D114001462E9 /* RCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B63BC611AD3D114001462E9 /* RCTabBar.m */; };
+		4B63BC671AD3D4B9001462E9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B63BC661AD3D4B9001462E9 /* UIView+Extension.m */; };
+		4B7B5C5D1AD40AA2005775A7 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7B5C5C1AD40AA2005775A7 /* DXPopover.m */; };
 		4BA351EB1AD3BE9C00A2FCD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA351EA1AD3BE9C00A2FCD5 /* main.m */; };
 		4BA351EE1AD3BE9C00A2FCD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA351ED1AD3BE9C00A2FCD5 /* AppDelegate.m */; };
-		4BA351F11AD3BE9C00A2FCD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA351F01AD3BE9C00A2FCD5 /* ViewController.m */; };
-		4BA351F41AD3BE9C00A2FCD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA351F21AD3BE9C00A2FCD5 /* Main.storyboard */; };
 		4BA351F61AD3BE9C00A2FCD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA351F51AD3BE9C00A2FCD5 /* Images.xcassets */; };
 		4BA351F91AD3BE9C00A2FCD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BA351F71AD3BE9C00A2FCD5 /* LaunchScreen.xib */; };
 		4BA352051AD3BE9C00A2FCD5 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA352041AD3BE9C00A2FCD5 /* ____Tests.m */; };
+		4BA3522F1AD3C08300A2FCD5 /* RCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3522E1AD3C08300A2FCD5 /* RCTabBarController.m */; };
+		4BA352321AD3C0A500A2FCD5 /* RCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA352311AD3C0A500A2FCD5 /* RCNavigationController.m */; };
+		4BA352351AD3C0C300A2FCD5 /* RCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA352341AD3C0C300A2FCD5 /* RCDiscoverViewController.m */; };
+		4BA352381AD3C0D600A2FCD5 /* RCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA352371AD3C0D600A2FCD5 /* RCHomeViewController.m */; };
+		4BA3523B1AD3C0E500A2FCD5 /* RCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3523A1AD3C0E500A2FCD5 /* RCMeViewController.m */; };
+		4BA3523E1AD3C0FB00A2FCD5 /* RCMesageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3523D1AD3C0FB00A2FCD5 /* RCMesageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +36,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B06F0BA1AD3F22B0032E46E /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		4B06F0BB1AD3F22B0032E46E /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		4B06F0BD1AD3F44B0032E46E /* RCTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTitleButton.h; sourceTree = "<group>"; };
+		4B06F0BE1AD3F44B0032E46E /* RCTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTitleButton.m; sourceTree = "<group>"; };
+		4B63BC601AD3D114001462E9 /* RCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTabBar.h; sourceTree = "<group>"; };
+		4B63BC611AD3D114001462E9 /* RCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTabBar.m; sourceTree = "<group>"; };
+		4B63BC651AD3D4B9001462E9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		4B63BC661AD3D4B9001462E9 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		4B63BC691AD3D52E001462E9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Category/PrefixHeader.pch; sourceTree = "<group>"; };
+		4B7B5C5B1AD40AA2005775A7 /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
+		4B7B5C5C1AD40AA2005775A7 /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
 		4BA351E51AD3BE9C00A2FCD5 /* 高仿微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高仿微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA351E91AD3BE9C00A2FCD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BA351EA1AD3BE9C00A2FCD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BA351EC1AD3BE9C00A2FCD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BA351ED1AD3BE9C00A2FCD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4BA351EF1AD3BE9C00A2FCD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4BA351F01AD3BE9C00A2FCD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4BA351F31AD3BE9C00A2FCD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BA351F51AD3BE9C00A2FCD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4BA351F81AD3BE9C00A2FCD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4BA351FE1AD3BE9C00A2FCD5 /* 高仿微博Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "高仿微博Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA352031AD3BE9C00A2FCD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BA352041AD3BE9C00A2FCD5 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		4BA3522D1AD3C08300A2FCD5 /* RCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTabBarController.h; sourceTree = "<group>"; };
+		4BA3522E1AD3C08300A2FCD5 /* RCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTabBarController.m; sourceTree = "<group>"; };
+		4BA352301AD3C0A500A2FCD5 /* RCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNavigationController.h; sourceTree = "<group>"; };
+		4BA352311AD3C0A500A2FCD5 /* RCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNavigationController.m; sourceTree = "<group>"; };
+		4BA352331AD3C0C300A2FCD5 /* RCDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscoverViewController.h; sourceTree = "<group>"; };
+		4BA352341AD3C0C300A2FCD5 /* RCDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDiscoverViewController.m; sourceTree = "<group>"; };
+		4BA352361AD3C0D600A2FCD5 /* RCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHomeViewController.h; sourceTree = "<group>"; };
+		4BA352371AD3C0D600A2FCD5 /* RCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHomeViewController.m; sourceTree = "<group>"; };
+		4BA352391AD3C0E500A2FCD5 /* RCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMeViewController.h; sourceTree = "<group>"; };
+		4BA3523A1AD3C0E500A2FCD5 /* RCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMeViewController.m; sourceTree = "<group>"; };
+		4BA3523C1AD3C0FB00A2FCD5 /* RCMesageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMesageViewController.h; sourceTree = "<group>"; };
+		4BA3523D1AD3C0FB00A2FCD5 /* RCMesageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMesageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +90,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B63BC641AD3D40B001462E9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4B63BC651AD3D4B9001462E9 /* UIView+Extension.h */,
+				4B63BC661AD3D4B9001462E9 /* UIView+Extension.m */,
+				4B06F0BA1AD3F22B0032E46E /* UIBarButtonItem+Extension.h */,
+				4B06F0BB1AD3F22B0032E46E /* UIBarButtonItem+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		4B7B5C471AD40804005775A7 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4B7B5C5A1AD40AA2005775A7 /* DXPopover */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4B7B5C5A1AD40AA2005775A7 /* DXPopover */ = {
+			isa = PBXGroup;
+			children = (
+				4B7B5C5B1AD40AA2005775A7 /* DXPopover.h */,
+				4B7B5C5C1AD40AA2005775A7 /* DXPopover.m */,
+			);
+			name = DXPopover;
+			path = ../DXPopover;
+			sourceTree = "<group>";
+		};
 		4BA351DC1AD3BE9C00A2FCD5 = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +140,10 @@
 		4BA351E71AD3BE9C00A2FCD5 /* 高仿微博 */ = {
 			isa = PBXGroup;
 			children = (
+				4BA352171AD3C05F00A2FCD5 /* classes */,
 				4BA351EC1AD3BE9C00A2FCD5 /* AppDelegate.h */,
 				4BA351ED1AD3BE9C00A2FCD5 /* AppDelegate.m */,
 				4BA351EF1AD3BE9C00A2FCD5 /* ViewController.h */,
-				4BA351F01AD3BE9C00A2FCD5 /* ViewController.m */,
-				4BA351F21AD3BE9C00A2FCD5 /* Main.storyboard */,
 				4BA351F51AD3BE9C00A2FCD5 /* Images.xcassets */,
 				4BA351F71AD3BE9C00A2FCD5 /* LaunchScreen.xib */,
 				4BA351E81AD3BE9C00A2FCD5 /* Supporting Files */,
@@ -117,6 +175,208 @@
 				4BA352031AD3BE9C00A2FCD5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BA352171AD3C05F00A2FCD5 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				4BA352201AD3C05F00A2FCD5 /* main */,
+				4BA352181AD3C05F00A2FCD5 /* discover(发现) */,
+				4BA3521C1AD3C05F00A2FCD5 /* home(首页) */,
+				4BA352231AD3C05F00A2FCD5 /* me(我) */,
+				4BA352271AD3C05F00A2FCD5 /* message(消息) */,
+				4BA3522B1AD3C05F00A2FCD5 /* other */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		4BA352181AD3C05F00A2FCD5 /* discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				4BA352191AD3C05F00A2FCD5 /* controller */,
+				4BA3521A1AD3C05F00A2FCD5 /* model */,
+				4BA3521B1AD3C05F00A2FCD5 /* view */,
+			);
+			path = "discover(发现)";
+			sourceTree = "<group>";
+		};
+		4BA352191AD3C05F00A2FCD5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BA352331AD3C0C300A2FCD5 /* RCDiscoverViewController.h */,
+				4BA352341AD3C0C300A2FCD5 /* RCDiscoverViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BA3521A1AD3C05F00A2FCD5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BA3521B1AD3C05F00A2FCD5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BA3521C1AD3C05F00A2FCD5 /* home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				4BA3521D1AD3C05F00A2FCD5 /* controller */,
+				4BA3521E1AD3C05F00A2FCD5 /* model */,
+				4BA3521F1AD3C05F00A2FCD5 /* view */,
+			);
+			path = "home(首页)";
+			sourceTree = "<group>";
+		};
+		4BA3521D1AD3C05F00A2FCD5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BA352361AD3C0D600A2FCD5 /* RCHomeViewController.h */,
+				4BA352371AD3C0D600A2FCD5 /* RCHomeViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BA3521E1AD3C05F00A2FCD5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BA3521F1AD3C05F00A2FCD5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4B06F0BD1AD3F44B0032E46E /* RCTitleButton.h */,
+				4B06F0BE1AD3F44B0032E46E /* RCTitleButton.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BA352201AD3C05F00A2FCD5 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				4BA3522C1AD3C07800A2FCD5 /* controller */,
+				4BA352211AD3C05F00A2FCD5 /* model */,
+				4BA352221AD3C05F00A2FCD5 /* view */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		4BA352211AD3C05F00A2FCD5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BA352221AD3C05F00A2FCD5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4B63BC601AD3D114001462E9 /* RCTabBar.h */,
+				4B63BC611AD3D114001462E9 /* RCTabBar.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BA352231AD3C05F00A2FCD5 /* me(我) */ = {
+			isa = PBXGroup;
+			children = (
+				4BA352241AD3C05F00A2FCD5 /* controller */,
+				4BA352251AD3C05F00A2FCD5 /* model */,
+				4BA352261AD3C05F00A2FCD5 /* view */,
+			);
+			path = "me(我)";
+			sourceTree = "<group>";
+		};
+		4BA352241AD3C05F00A2FCD5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BA352391AD3C0E500A2FCD5 /* RCMeViewController.h */,
+				4BA3523A1AD3C0E500A2FCD5 /* RCMeViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BA352251AD3C05F00A2FCD5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BA352261AD3C05F00A2FCD5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BA352271AD3C05F00A2FCD5 /* message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				4BA352281AD3C05F00A2FCD5 /* controller */,
+				4BA352291AD3C05F00A2FCD5 /* model */,
+				4BA3522A1AD3C05F00A2FCD5 /* view */,
+			);
+			path = "message(消息)";
+			sourceTree = "<group>";
+		};
+		4BA352281AD3C05F00A2FCD5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BA3523C1AD3C0FB00A2FCD5 /* RCMesageViewController.h */,
+				4BA3523D1AD3C0FB00A2FCD5 /* RCMesageViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BA352291AD3C05F00A2FCD5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BA3522A1AD3C05F00A2FCD5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4BFC26421AD3FFC80099B2B0 /* lib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BA3522B1AD3C05F00A2FCD5 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				4B7B5C471AD40804005775A7 /* lib */,
+				4B63BC691AD3D52E001462E9 /* PrefixHeader.pch */,
+				4B63BC641AD3D40B001462E9 /* Category */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		4BA3522C1AD3C07800A2FCD5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BA3522D1AD3C08300A2FCD5 /* RCTabBarController.h */,
+				4BA3522E1AD3C08300A2FCD5 /* RCTabBarController.m */,
+				4BA352301AD3C0A500A2FCD5 /* RCNavigationController.h */,
+				4BA352311AD3C0A500A2FCD5 /* RCNavigationController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BFC26421AD3FFC80099B2B0 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +423,7 @@
 		4BA351DD1AD3BE9C00A2FCD5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RC;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = raychen;
 				TargetAttributes = {
@@ -199,7 +460,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BA351F41AD3BE9C00A2FCD5 /* Main.storyboard in Resources */,
 				4BA351F91AD3BE9C00A2FCD5 /* LaunchScreen.xib in Resources */,
 				4BA351F61AD3BE9C00A2FCD5 /* Images.xcassets in Resources */,
 			);
@@ -219,8 +479,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BA351F11AD3BE9C00A2FCD5 /* ViewController.m in Sources */,
+				4B63BC671AD3D4B9001462E9 /* UIView+Extension.m in Sources */,
+				4B7B5C5D1AD40AA2005775A7 /* DXPopover.m in Sources */,
+				4BA352321AD3C0A500A2FCD5 /* RCNavigationController.m in Sources */,
+				4BA3523E1AD3C0FB00A2FCD5 /* RCMesageViewController.m in Sources */,
+				4BA3522F1AD3C08300A2FCD5 /* RCTabBarController.m in Sources */,
+				4BA352381AD3C0D600A2FCD5 /* RCHomeViewController.m in Sources */,
+				4BA352351AD3C0C300A2FCD5 /* RCDiscoverViewController.m in Sources */,
+				4B06F0BC1AD3F22B0032E46E /* UIBarButtonItem+Extension.m in Sources */,
+				4BA3523B1AD3C0E500A2FCD5 /* RCMeViewController.m in Sources */,
 				4BA351EE1AD3BE9C00A2FCD5 /* AppDelegate.m in Sources */,
+				4B06F0BF1AD3F44B0032E46E /* RCTitleButton.m in Sources */,
+				4B63BC621AD3D114001462E9 /* RCTabBar.m in Sources */,
 				4BA351EB1AD3BE9C00A2FCD5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +514,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4BA351F21AD3BE9C00A2FCD5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BA351F31AD3BE9C00A2FCD5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4BA351F71AD3BE9C00A2FCD5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +548,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -326,6 +589,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -412,6 +676,7 @@
 				4BA3520A1AD3BE9C00A2FCD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BA3520B1AD3BE9C00A2FCD5 /* Build configuration list for PBXNativeTarget "高仿微博Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +685,7 @@
 				4BA3520D1AD3BE9C00A2FCD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
