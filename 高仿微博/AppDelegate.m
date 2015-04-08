@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RCTabBarController.h"
+#import "RCNewFeatureViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +18,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[RCTabBarController alloc]init];
+    //取出储存的版本号
+    NSString * oldVersion = [[NSUserDefaults standardUserDefaults] valueForKey:@"CFBundleShortVersionString"];
+    //获取当前版本号
+  NSDictionary * infoDict = [NSBundle mainBundle].infoDictionary;
+    NSString * currentVersion = infoDict[@"CFBundleShortVersionString"];
+    NSLog(@"%@",currentVersion);
+    
+    //储存当前版本号
+    [[NSUserDefaults standardUserDefaults] setValue:currentVersion forKey:@"CFBundleShortVersionString"];
+    
+ 
+    if ([currentVersion isEqualToString:oldVersion]) {//版本号相同,进入主页面
+        self.window.rootViewController = [[RCTabBarController alloc]init];
+    }else{ //版本号不同，进入版本新特性界面
+        self.window.rootViewController = [[RCNewFeatureViewController alloc]init];
+
+    
+    }
+//    self.window.rootViewController = [[RCTabBarController alloc]init];
+//    self.window.rootViewController = [[RCNewFeatureViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;

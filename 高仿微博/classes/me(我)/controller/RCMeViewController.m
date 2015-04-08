@@ -16,6 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 设置导航栏
+    [self setUpNavigationBar];
+}
+/**
+ *  设置导航栏
+ */
+- (void)setUpNavigationBar{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(openSetting)];
+    //设置文字的颜色
+    NSMutableDictionary * nomalAttr = [NSMutableDictionary dictionary];
+    nomalAttr[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:nomalAttr forState:UIControlStateNormal];
+    NSMutableDictionary * higthligthAttr = [NSMutableDictionary dictionary];
+    nomalAttr[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:higthligthAttr forState:UIControlStateHighlighted];
+    
 }
 
+- (void)openSetting{
+    
+    
+    
+}
 @end

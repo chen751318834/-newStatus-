@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4B06F0BC1AD3F22B0032E46E /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B06F0BB1AD3F22B0032E46E /* UIBarButtonItem+Extension.m */; };
 		4B06F0BF1AD3F44B0032E46E /* RCTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B06F0BE1AD3F44B0032E46E /* RCTitleButton.m */; };
+		4B1A39A71AD4BB560046CA12 /* RCNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1A39A61AD4BB560046CA12 /* RCNewFeatureViewController.m */; };
+		4B1A39AB1AD4BC870046CA12 /* RCNewFeatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1A39AA1AD4BC870046CA12 /* RCNewFeatureView.m */; };
+		4B50170E1AD4176E0043B17E /* RCSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B50170D1AD4176E0043B17E /* RCSearchBar.m */; };
 		4B63BC621AD3D114001462E9 /* RCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B63BC611AD3D114001462E9 /* RCTabBar.m */; };
 		4B63BC671AD3D4B9001462E9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B63BC661AD3D4B9001462E9 /* UIView+Extension.m */; };
 		4B7B5C5D1AD40AA2005775A7 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7B5C5C1AD40AA2005775A7 /* DXPopover.m */; };
@@ -40,6 +43,12 @@
 		4B06F0BB1AD3F22B0032E46E /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		4B06F0BD1AD3F44B0032E46E /* RCTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTitleButton.h; sourceTree = "<group>"; };
 		4B06F0BE1AD3F44B0032E46E /* RCTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTitleButton.m; sourceTree = "<group>"; };
+		4B1A39A51AD4BB560046CA12 /* RCNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNewFeatureViewController.h; sourceTree = "<group>"; };
+		4B1A39A61AD4BB560046CA12 /* RCNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNewFeatureViewController.m; sourceTree = "<group>"; };
+		4B1A39A91AD4BC870046CA12 /* RCNewFeatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNewFeatureView.h; sourceTree = "<group>"; };
+		4B1A39AA1AD4BC870046CA12 /* RCNewFeatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNewFeatureView.m; sourceTree = "<group>"; };
+		4B50170C1AD4176E0043B17E /* RCSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSearchBar.h; sourceTree = "<group>"; };
+		4B50170D1AD4176E0043B17E /* RCSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSearchBar.m; sourceTree = "<group>"; };
 		4B63BC601AD3D114001462E9 /* RCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTabBar.h; sourceTree = "<group>"; };
 		4B63BC611AD3D114001462E9 /* RCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTabBar.m; sourceTree = "<group>"; };
 		4B63BC651AD3D4B9001462E9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -90,6 +99,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B1A39A31AD4BB330046CA12 /* newFeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				4B1A39A81AD4BC4D0046CA12 /* view */,
+				4B1A39A41AD4BB330046CA12 /* controller */,
+			);
+			path = "newFeature(新特性)";
+			sourceTree = "<group>";
+		};
+		4B1A39A41AD4BB330046CA12 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B1A39A51AD4BB560046CA12 /* RCNewFeatureViewController.h */,
+				4B1A39A61AD4BB560046CA12 /* RCNewFeatureViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4B1A39A81AD4BC4D0046CA12 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4B1A39A91AD4BC870046CA12 /* RCNewFeatureView.h */,
+				4B1A39AA1AD4BC870046CA12 /* RCNewFeatureView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		4B63BC641AD3D40B001462E9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +216,7 @@
 		4BA352171AD3C05F00A2FCD5 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				4B1A39A31AD4BB330046CA12 /* newFeature(新特性) */,
 				4BA352201AD3C05F00A2FCD5 /* main */,
 				4BA352181AD3C05F00A2FCD5 /* discover(发现) */,
 				4BA3521C1AD3C05F00A2FCD5 /* home(首页) */,
@@ -219,6 +256,8 @@
 		4BA3521B1AD3C05F00A2FCD5 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4B50170C1AD4176E0043B17E /* RCSearchBar.h */,
+				4B50170D1AD4176E0043B17E /* RCSearchBar.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -479,14 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1A39A71AD4BB560046CA12 /* RCNewFeatureViewController.m in Sources */,
 				4B63BC671AD3D4B9001462E9 /* UIView+Extension.m in Sources */,
 				4B7B5C5D1AD40AA2005775A7 /* DXPopover.m in Sources */,
+				4B1A39AB1AD4BC870046CA12 /* RCNewFeatureView.m in Sources */,
 				4BA352321AD3C0A500A2FCD5 /* RCNavigationController.m in Sources */,
 				4BA3523E1AD3C0FB00A2FCD5 /* RCMesageViewController.m in Sources */,
 				4BA3522F1AD3C08300A2FCD5 /* RCTabBarController.m in Sources */,
 				4BA352381AD3C0D600A2FCD5 /* RCHomeViewController.m in Sources */,
 				4BA352351AD3C0C300A2FCD5 /* RCDiscoverViewController.m in Sources */,
 				4B06F0BC1AD3F22B0032E46E /* UIBarButtonItem+Extension.m in Sources */,
+				4B50170E1AD4176E0043B17E /* RCSearchBar.m in Sources */,
 				4BA3523B1AD3C0E500A2FCD5 /* RCMeViewController.m in Sources */,
 				4BA351EE1AD3BE9C00A2FCD5 /* AppDelegate.m in Sources */,
 				4B06F0BF1AD3F44B0032E46E /* RCTitleButton.m in Sources */,

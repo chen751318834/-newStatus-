@@ -23,6 +23,20 @@
  *  设置导航栏
  */
 - (void)setUpNavigationBar{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"发送消息" style:UIBarButtonItemStyleDone target:self action:@selector(sendMessage)];
+    //设置文字的颜色
+    NSMutableDictionary * nomalAttr = [NSMutableDictionary dictionary];
+    nomalAttr[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:nomalAttr forState:UIControlStateNormal];
+    NSMutableDictionary * higthligthAttr = [NSMutableDictionary dictionary];
+    nomalAttr[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:higthligthAttr forState:UIControlStateHighlighted];
+    
+}
+
+- (void)sendMessage{
+    
+    
     
 }
 @end
