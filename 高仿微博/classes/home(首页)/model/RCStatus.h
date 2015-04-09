@@ -39,25 +39,15 @@
  */
 @property (nonatomic, assign)int reposts_count;
 /**
- *  	评论数
+ * 评论数
  */
 @property (nonatomic, assign)int comments_count;
 /**
- *  	表态数
+ *  表态数
  */
 @property (nonatomic, assign)int attitudes_count;
-/**
- *  缩略图片地址，没有时不返回此字段
- */
-@property(copy,nonatomic) NSString * thumbnail_pic;
-/**
- *  中等尺寸图片地址，没有时不返回此字段
- */
-@property(copy,nonatomic) NSString * bmiddle_pic;
-/**
- 始图片地址，没有时不返回此字段
- */
-@property(copy,nonatomic) NSString * original_pic;
+
+
 /**
  被转发的原微博信息字段，当该微博为转发微博时返回
  */

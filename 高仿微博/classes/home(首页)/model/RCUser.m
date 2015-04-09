@@ -9,5 +9,9 @@
 #import "RCUser.h"
 
 @implementation RCUser
+- (BOOL)isVip
+{
+    return self.mbtype > 2;
+}
 
 @end

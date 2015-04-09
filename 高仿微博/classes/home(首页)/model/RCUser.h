@@ -28,7 +28,7 @@
 
 /** 用户创建（注册）时间*/
 @property(copy,nonatomic) NSString * created_at;
-/**  	用户备注信息，只有在查询用户关系时才返回此字*/
+/**  用户备注信息，只有在查询用户关系时才返回此字*/
 @property(copy,nonatomic) NSString * remark;
 /** 用户头像地址（大图），180×180像素）*/
 @property(copy,nonatomic) NSString * avatar_large;
@@ -58,6 +58,12 @@
 /**  	是否是微博认证用户，即加V用户，true：是，false：否
   */
 @property (nonatomic, assign)BOOL verified;
+@property (nonatomic, assign,getter=isVip)BOOL vip;
+
+/** 会员等级 */
+@property (nonatomic, assign) int mbrank;
+/** 会员类型 */
+@property (nonatomic, assign) int mbtype;
 
 
 @end
