@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "RCStatus.h"
-static const CGFloat RCUserNameFont = 15;
+static const CGFloat RCUserNameFont = 14;
 static const CGFloat RCTimeFont = 10;
 static const CGFloat RCSoureFont = 10;
 static const CGFloat RCUContentFont = 14;

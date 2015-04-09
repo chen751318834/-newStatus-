@@ -48,6 +48,7 @@
 		4B3752B41AD65E34008DFE56 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3752A71AD65E34008DFE56 /* NSObject+MJCoding.m */; };
 		4B3752B51AD65E34008DFE56 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3752A91AD65E34008DFE56 /* NSObject+MJKeyValue.m */; };
 		4B3752B61AD65E34008DFE56 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3752AB1AD65E34008DFE56 /* NSObject+MJMember.m */; };
+		4B4C6E671AD68B03002C2FA8 /* home.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B4C6E661AD68B03002C2FA8 /* home.plist */; };
 		4B50170E1AD4176E0043B17E /* RCSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B50170D1AD4176E0043B17E /* RCSearchBar.m */; };
 		4B63BC621AD3D114001462E9 /* RCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B63BC611AD3D114001462E9 /* RCTabBar.m */; };
 		4B63BC671AD3D4B9001462E9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B63BC661AD3D4B9001462E9 /* UIView+Extension.m */; };
@@ -193,6 +194,7 @@
 		4B3752A91AD65E34008DFE56 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		4B3752AA1AD65E34008DFE56 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		4B3752AB1AD65E34008DFE56 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		4B4C6E661AD68B03002C2FA8 /* home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = home.plist; sourceTree = "<group>"; };
 		4B50170C1AD4176E0043B17E /* RCSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSearchBar.h; sourceTree = "<group>"; };
 		4B50170D1AD4176E0043B17E /* RCSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSearchBar.m; sourceTree = "<group>"; };
 		4B63BC601AD3D114001462E9 /* RCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTabBar.h; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 		4BA351E81AD3BE9C00A2FCD5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B4C6E661AD68B03002C2FA8 /* home.plist */,
 				4BA351E91AD3BE9C00A2FCD5 /* Info.plist */,
 				4BA351EA1AD3BE9C00A2FCD5 /* main.m */,
 			);
@@ -950,6 +953,7 @@
 				4BA351F91AD3BE9C00A2FCD5 /* LaunchScreen.xib in Resources */,
 				4BA351F61AD3BE9C00A2FCD5 /* Images.xcassets in Resources */,
 				4BE8CC1C1AD52C2D00292996 /* MJRefresh.bundle in Resources */,
+				4B4C6E671AD68B03002C2FA8 /* home.plist in Resources */,
 				4BE8CBD71AD526AB00292996 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

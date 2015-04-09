@@ -33,11 +33,22 @@
     static NSString * ID =@"status";
     RCStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
-        
+//        cell.backgroundColor = [UIColor yellowColor];
         cell =[[RCStatusCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     }
     return  cell;
 
+}
+- (instancetype)initWithFrame:(CGRect)frame{
+    if ([super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor clearColor];
+    }
+    
+    return self;
+    
+    
 }
 /**
  *  设置数据，传递Frame

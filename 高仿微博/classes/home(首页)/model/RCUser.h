@@ -12,7 +12,7 @@
 /**  字符串型的用户UID*/
 @property(copy,nonatomic) NSString * idstr;
 /**  用户昵称*/
-@property(copy,nonatomic) NSString * screen_name;
+@property(copy,nonatomic) NSString * name;
 /**  用户所在地*/
 @property(copy,nonatomic) NSString * location;
 /**  用户个人描述*/

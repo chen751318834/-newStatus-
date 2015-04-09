@@ -32,13 +32,17 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if ([super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor colorWithWhite:0.929 alpha:1.000];
+//        self.backgroundColor = [UIColor redColor];
         //原始微博的View
         RCOriginalStastusView * originalStatusView = [[RCOriginalStastusView alloc]init];
         [self addSubview:originalStatusView];
+//        originalStatusView.backgroundColor = [UIColor redColor];
         self.originalStastusView = originalStatusView;
         
-        //原始微博的View
+        //转发微博的View
         RCRetweetedStatusView * retweetedStatusView = [[RCRetweetedStatusView alloc]init];
+//        retweetedStatusView.backgroundColor = [UIColor greenColor];
         [self addSubview:retweetedStatusView];
         self.retweetedStatusView = retweetedStatusView;
 
@@ -46,6 +50,7 @@
         //原始微博的View
         RCToolBar * toolBar = [[RCToolBar alloc]init];
         [self addSubview:toolBar];
+    
         self.toolBar = toolBar;
 
         

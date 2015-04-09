@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "RCStatus.h"
+@class RCToolBar;
+typedef enum{
+    RCToolBarButtonTypeTransmit , //转发
+    RCToolBarButtonTypeEvaluate, //评价
+    RCToolBarButtonTypeCommend, //赞
+}RCToolBarButtonType;
+
 @interface RCToolBar : UIView
 @property(strong,nonatomic) RCStatus * status;
 

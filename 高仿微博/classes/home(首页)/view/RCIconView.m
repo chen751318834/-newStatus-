@@ -20,6 +20,7 @@
         UIImageView * vView = [[UIImageView alloc]init];
         [self addSubview:vView];
         self.vView = vView;
+        
     }
     
     return self;
@@ -49,4 +50,5 @@
     
     self.vView.frame = CGRectMake(vViewX, vViewY, vViewW, vViewH);
 }
+
 @end

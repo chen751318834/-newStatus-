@@ -20,7 +20,7 @@
 #import "RCStatusCell.h"
 #import "MJRefresh.h"
 #import "RCStatusFrame.h"
-@interface RCHomeViewController ()
+@interface RCHomeViewController () 
 @property(nonatomic,weak) RCTitleButton * titleButton;
 /**
  *  存放微博数据，子控件的frame，cell的高度的数组
@@ -34,7 +34,9 @@
 #pragma mark - 懒加载
 -(NSMutableArray *)statusFrames{
     if (!_statusFrames) {
+        
         self.statusFrames =[NSMutableArray array];
+     
     }
     return _statusFrames;
 }
@@ -42,6 +44,9 @@
 #pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithWhite:0.929 alpha:1.000];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 设置导航栏
     [self setUpNavigationBar];
     
@@ -117,6 +122,7 @@
 #pragma mark - tableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 
 }
 #pragma mark - 网络请求
@@ -125,7 +131,28 @@
  *  加载新的微博数据
  */
 - (void) loadNewStatus{
-
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSDictionary *responseObject = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"home" ofType:@"plist"]];
+        // 将 "微博字典"数组 转为 "微博模型"数组
+        NSArray *newStatuses = [RCStatus objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        // 将 HWStatus数组 转为 HWStatusFrame数组
+        NSArray *newFrames = [self statusFramesWithStatuses:newStatuses];
+        
+        // 将最新的微博数据，添加到总数组的最前面
+        NSRange range = NSMakeRange(0, newFrames.count);
+        NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:range];
+        [self.statusFrames insertObjects:newFrames atIndexes:set];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        
+               // 显示最新微博的数量
+//        [self showNewStatusCount:newStatuses.count];
+    });
+    
+    return;
+    
     RCStatusParam * param = [[RCStatusParam alloc]init];
     param.access_token = [RCAccountTool account].access_token;
 //    param.count = @20;

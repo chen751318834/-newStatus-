@@ -24,11 +24,13 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if ([super initWithFrame:frame]) {
+//        self.backgroundColor = [UIColor colorWithWhite:0.929 alpha:1.000];
+//        self.backgroundColor = [UIColor colorWithRed:1.000 green:0.000 blue:0.519 alpha:1.000];
          //正文
         UILabel * retweetedContentLabel = [[UILabel alloc]init];
-        [self addSubview:retweetedContentLabel];
         retweetedContentLabel.numberOfLines = 0;
         retweetedContentLabel.font = [UIFont systemFontOfSize:RCReweetedStatusContentFont];
+        [self addSubview:retweetedContentLabel];
         self.retweetedContentLabel = retweetedContentLabel;
         //配图
         RCPhotosView * retweetedPhotosView = [[RCPhotosView alloc]init];
@@ -54,7 +56,10 @@
     
     //正文
     self.retweetedContentLabel.frame = statusFrame.retweetedContentLabelF;
-    self.retweetedContentLabel.text = status.retweeted_status.text;
+
+         self.retweetedContentLabel.text = [NSString stringWithFormat:@"@%@:%@",status.retweeted_status.user.name,status.retweeted_status.text];
+
+   
     //配图
     self.retweetedPhotosView.frame = statusFrame.retweetedPhotosViewF;
     if (status.retweeted_status.pic_ids.count) {  //有配图

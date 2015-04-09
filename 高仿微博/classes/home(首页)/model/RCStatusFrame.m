@@ -11,7 +11,7 @@
 /**
  *  子控件之间的间距
  */
-static const CGFloat RCMargin = 5;
+static const CGFloat RCMargin = 10;
 
 @implementation RCStatusFrame
 /**
@@ -32,13 +32,13 @@ static const CGFloat RCMargin = 5;
     CGFloat userNameX = CGRectGetMaxX(_iconViewF)+RCMargin;
     CGFloat userNameY = iconY;
 
-    CGSize  userNameLabelSize = [self.status.user.screen_name boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:RCUserNameFont]} context:nil].size;
+    CGSize  userNameLabelSize = [self.status.user.name boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:RCUserNameFont]} context:nil].size;
     _userNameLabelF = CGRectMake(userNameX, userNameY, userNameLabelSize.width, userNameLabelSize.height);
      //Vip
     CGFloat vipX = CGRectGetMaxX(_userNameLabelF)+RCMargin;
-    CGFloat vipY = userNameX;
-    CGFloat vipW = 10;
-    CGFloat vipH = 10;
+    CGFloat vipY = userNameY;
+    CGFloat vipW = 17;
+    CGFloat vipH = 17;
     _vipViewF = CGRectMake(vipX, vipY, vipW, vipH);
     
     //微博发送时间
@@ -57,7 +57,7 @@ static const CGFloat RCMargin = 5;
     //正文
     CGFloat  contentX = iconX;
     CGFloat  contentY = MAX(CGRectGetMaxY(_iconViewF), CGRectGetMaxY(_timeLabelF))+ RCMargin;
-    CGSize  contentLabelSize = [self.status.text boundingRectWithSize:CGSizeMake( [UIScreen mainScreen].bounds.size.width - 4*contentX, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:RCUContentFont]} context:nil].size;
+    CGSize  contentLabelSize = [self.status.text boundingRectWithSize:CGSizeMake( [UIScreen mainScreen].bounds.size.width - 2*contentX, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:RCUContentFont]} context:nil].size;
     _contentLabelF = CGRectMake(contentX, contentY, contentLabelSize.width, contentLabelSize.height);
     CGFloat originalStastusViewH = 0;
 
@@ -74,69 +74,71 @@ static const CGFloat RCMargin = 5;
     }
     
    //原始微博的View
-    CGFloat originalStastusViewX = iconX;
-    CGFloat originalStastusViewY = iconY;
-    CGFloat originalStastusViewW = [UIScreen mainScreen].bounds.size.width - 2*RCMargin;
+    CGFloat originalStastusViewX = 0;
+    CGFloat originalStastusViewY = 0;
+    CGFloat originalStastusViewW = [UIScreen mainScreen].bounds.size.width - 4*originalStastusViewX;
     _originalStastusViewF = CGRectMake(originalStastusViewX, originalStastusViewY, originalStastusViewW,originalStastusViewH);
     
         CGFloat toolBarY = CGRectGetMaxY(_originalStastusViewF)+RCMargin;
+    CGFloat statusContentViewH= 0;
     if (status.retweeted_status) {  //有转发微博
-        
-        toolBarY = CGRectGetMaxY(_retweetedStatusViewF)+RCMargin;
-        
-        
+//        
         //转发微博的View
-        CGFloat reweetedStatusViewH = 0;
-        CGFloat reweetedStatusViewX = originalStastusViewX;
+        CGFloat reweetedStatusViewX = 0;
         CGFloat reweetedStatusViewY = CGRectGetMaxY(_originalStastusViewF) + RCMargin;
         CGFloat reweetedStatusViewW = originalStastusViewW;
-      
-        //转发正文
+        CGFloat reweetedStatusViewH = 0;
+//
+//        //转发正文
         CGFloat reweetedContentLabelX = RCMargin;
         CGFloat reweetedContentLabelY = RCMargin;
         CGFloat reweetedContentLabelW = reweetedStatusViewW;
         CGSize  contentLabelSize = [self.status.text boundingRectWithSize:CGSizeMake( reweetedContentLabelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:RCReweetedStatusContentFont]} context:nil].size;
-
+//
         _retweetedContentLabelF = CGRectMake(reweetedContentLabelX, reweetedContentLabelY, contentLabelSize.width, contentLabelSize.height);
-        
+//
         //转发微博的配图
         if (status.retweeted_status.pic_ids.count) {
-//            CGFloat retweetedPhotosViewH = 0;
-            CGFloat retweetedPhotosViewX = originalStastusViewX;
-            CGFloat retweetedPhotosViewY = CGRectGetMaxY(_originalStastusViewF) + RCMargin;
+////            CGFloat retweetedPhotosViewH = 0;
+            CGFloat retweetedPhotosViewX = reweetedContentLabelX;
+            CGFloat retweetedPhotosViewY = CGRectGetMaxY(_retweetedContentLabelF) + RCMargin;
            CGSize retweetedPhotosViewSize = [RCPhotosView sizeWithCount:status.retweeted_status.pic_ids.count];
-//            CGFloat retweetedPhotosViewW = originalStastusViewW;
+////            CGFloat retweetedPhotosViewW = originalStastusViewW;
             _retweetedPhotosViewF = CGRectMake(retweetedPhotosViewX, retweetedPhotosViewY, retweetedPhotosViewSize.width, retweetedPhotosViewSize.height);
-            
+//
             reweetedStatusViewH = CGRectGetMaxY(_retweetedPhotosViewF)+ RCMargin;
         }else{
         
             reweetedStatusViewH = CGRectGetMaxY(_retweetedContentLabelF)+ RCMargin;
-
-        
+   
         }
         
                _retweetedStatusViewF = CGRectMake(reweetedStatusViewX, reweetedStatusViewY, reweetedStatusViewW,reweetedStatusViewH);
         
-        //cell的View
-        _statusContentViewF = _retweetedStatusViewF;
+          toolBarY = CGRectGetMaxY(_retweetedStatusViewF)+1;
     }else{  //没有转发微博
-        
-        
-        //cell的View
-        _statusContentViewF = _originalStastusViewF;
+        toolBarY = CGRectGetMaxY(_originalStastusViewF)+1;
+
+       
     }
 
     
     //工具条的view
     CGFloat toolBarX = originalStastusViewX;
     CGFloat toolBarW = originalStastusViewW;
-    CGFloat toolBarH = 44;
+    CGFloat toolBarH = 40;
 
     _toolBarF =  CGRectMake(toolBarX, toolBarY, toolBarW, toolBarH);
+    statusContentViewH = CGRectGetMaxY(_toolBarF) +RCMargin;
 
-
+    CGFloat statusContentViewX = 0;
+    CGFloat statusContentViewY= 0;
+    CGFloat statusContentViewW = [UIScreen mainScreen].bounds.size.width;
+    
+    //cell的View
+    _statusContentViewF = CGRectMake(statusContentViewX, statusContentViewY, statusContentViewW, statusContentViewH);
+    
     //cell的高度
-    _cellHigth = CGRectGetMaxY(_toolBarF)+ RCMargin;
+    _cellHigth = CGRectGetMaxY(_statusContentViewF)+RCMargin;
 }
 @end

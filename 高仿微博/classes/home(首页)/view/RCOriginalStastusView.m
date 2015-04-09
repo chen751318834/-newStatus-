@@ -31,6 +31,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if ([super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor whiteColor];
         //头像
         RCIconView *iconView = [[RCIconView alloc]init];
         [self addSubview:iconView];
@@ -39,7 +40,7 @@
         //用户名
         UILabel *userNameLabel = [[UILabel alloc]init];
         [self addSubview:userNameLabel];
-        self.userNameLabel.textColor = [UIColor blackColor];
+        self.userNameLabel.textColor = [UIColor redColor];
         userNameLabel.font = [UIFont systemFontOfSize:RCUserNameFont];
 
         self.userNameLabel = userNameLabel;
@@ -98,7 +99,7 @@
     self.iconView.user = user;
     //用户名
     self.userNameLabel.frame = statusFrame.userNameLabelF;
-    self.userNameLabel.text = user.screen_name;
+    self.userNameLabel.text = user.name;
 //    self.userNameLabel.backgroundColor = [UIColor redColor];
     //vip
     self.vipView.frame = statusFrame.vipViewF;
