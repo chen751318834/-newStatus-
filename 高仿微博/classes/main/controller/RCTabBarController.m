@@ -13,11 +13,14 @@
 #import "RCMeViewController.h"
 #import "RCNavigationController.h"
 #import "RCTabBar.h"
+#import "RCComposeViewController.h"
 @interface RCTabBarController () <RCTabBarDelegate>
 
 @end
 
 @implementation RCTabBarController
+
+
 #pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,7 +74,8 @@
 
 #pragma mark - RCTabBarDelegate
 - (void)tabBarDidPlusButton:(RCTabBar *)tabBar{
-//    NSLog(@"tabBarDidPlusButton");
+    RCComposeViewController *composeC = [[RCComposeViewController alloc]init];
+    [self presentViewController:composeC animated:YES completion:nil];
 
-}
+   }
 @end

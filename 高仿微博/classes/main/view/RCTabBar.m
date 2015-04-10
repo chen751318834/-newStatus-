@@ -25,6 +25,7 @@
     if ([super initWithFrame:frame]) {
         //创建加号按钮
         UIButton * plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        plusButton.backgroundColor = [UIColor clearColor];
 //        plusButton.backgroundColor = [UIColor redColor];
         [plusButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
         [plusButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];

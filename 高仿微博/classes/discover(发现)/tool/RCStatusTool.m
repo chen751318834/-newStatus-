@@ -11,6 +11,8 @@
 #import "RCStatusParam.h"
 #import "RCStatusResult.h"
 #import "MJExtension.h"
+#import "RCUserParam.h"
+#import "RCUserInfoResult.h"
 @implementation RCStatusTool
 + (void)loadHomeStatusWithParam:(RCStatusParam *)param success:(void (^)(RCStatusResult *))success failure:(void (^)(NSError *))failure{
 
@@ -24,5 +26,19 @@
             failure(error);
         }
     }];
+}
++(void)userInfoWithParam:(RCUserParam *)param success:(void (^)(RCUserInfoResult *))success failure:(void (^)(NSError *))failure{
+    
+    [RCNetWorkingTool get:@"https://api.weibo.com/2/users/show.json" params:param.keyValues success:^(id json) {
+        if (success) {
+            RCUserInfoResult * result = [RCUserInfoResult objectWithKeyValues:json];
+            success(result);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+
 }
 @end

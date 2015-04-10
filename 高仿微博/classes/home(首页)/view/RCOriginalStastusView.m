@@ -69,7 +69,7 @@
         
         //配图
         RCPhotosView * photosView = [[RCPhotosView alloc]init];
-        photosView.backgroundColor = [UIColor redColor];
+//        photosView.backgroundColor = [UIColor redColor];
         [self addSubview:photosView];
         self.photosView = photosView;
 
@@ -133,15 +133,14 @@
 //     self.contentLabel.backgroundColor = [UIColor redColor];
      //vip
     //配图
-    if (status.pic_ids.count) {
+    if (status.pic_urls.count) {
         self.photosView.frame = statusFrame.photosViewF;
         self.photosView.hidden = NO;
-        self.photosView.photos = status.pic_ids;
-        NSLog(@"%@",status.pic_ids);
+        self.photosView.photos = status.pic_urls;
+        NSLog(@"%@",status.pic_urls);
     }else{
         self.photosView.hidden = YES;
     }
-    NSLog(@"===============%@",status.pic_ids);
 
 }
 @end

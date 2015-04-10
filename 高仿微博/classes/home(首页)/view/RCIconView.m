@@ -43,8 +43,8 @@
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
-    CGFloat vViewW = self.image.size.width;
-    CGFloat vViewH= self.image.size.height;
+    CGFloat vViewW = 15;
+    CGFloat vViewH= 15;
     CGFloat vViewX = self.bounds.size.width - vViewW;
     CGFloat vViewY = self.bounds.size.height - vViewH;;
     

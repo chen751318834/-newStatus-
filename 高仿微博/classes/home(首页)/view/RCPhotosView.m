@@ -9,10 +9,18 @@
 #import "RCPhotosView.h"
 #import "RCPhotoView.h"
 #import "UIView+Extension.h"
-#define RCStatusPhotoMaxCol(count) ((count==4)?2:3)
+#import "MJPhotoBrowser.h"
+#import "RCPhoto.h"
+#import "MJPhoto.h"
+#define RCStatusPhotoMaxCol(count) ((count<=4)?2:3)
 static const CGFloat RCStatusPhotoWH = 70;
 static const CGFloat RCStatusPhotoMargin = 10;
 
+
+
+@interface RCPhotosView ()
+@property(nonatomic,weak) RCPhotoView * photoView;
+@end
 @implementation RCPhotosView
 
 /*
@@ -22,14 +30,36 @@ static const CGFloat RCStatusPhotoMargin = 10;
     // Drawing code
 }
 */
-- (instancetype)initWithFrame:(CGRect)frame{
-    if ([super initWithFrame:frame]) {
+
+/**
+ *  点击了某个图片
+ */
+- (void)photoTap:(UITapGestureRecognizer *)tap
+{
+    // 1.创建浏览器对象
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+    
+    // 2.设置浏览器对象的所有图片
+    NSMutableArray *mjphotos = [NSMutableArray array];
+    for (int i = 0; i<self.photos.count; i++) {
+        // 取出图片模型
+        RCPhoto *photo = self.photos[i];
         
+        // 创建MJPhoto模型
+        MJPhoto *mjphoto = [[MJPhoto alloc] init];
+        // 设置图片的url
+        mjphoto.url = [NSURL URLWithString:photo.bmiddle_pic];
+        // 设置图片的来源view
+        mjphoto.srcImageView = self.subviews[i];
+        [mjphotos addObject:mjphoto];
     }
+    browser.photos = mjphotos;
     
-    return self;
+    // 3.设置浏览器默认显示的图片位置
+    browser.currentPhotoIndex = tap.view.tag;
     
-    
+    // 4.显示浏览器
+    [browser show];
 }
 - (void)setPhotos:(NSArray *)photos{
 
@@ -42,6 +72,8 @@ static const CGFloat RCStatusPhotoMargin = 10;
     while (self.subviews.count < photosCount) {
         RCPhotoView *photoView = [[RCPhotoView alloc] init];
         [self addSubview:photoView];
+        // 2.添加点击事件
+        [photoView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTap:)]];
     }
     
     // 遍历所有的图片控件，设置图片

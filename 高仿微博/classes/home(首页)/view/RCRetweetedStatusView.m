@@ -28,9 +28,10 @@
 //        self.backgroundColor = [UIColor colorWithRed:1.000 green:0.000 blue:0.519 alpha:1.000];
          //正文
         UILabel * retweetedContentLabel = [[UILabel alloc]init];
-        retweetedContentLabel.numberOfLines = 0;
         retweetedContentLabel.font = [UIFont systemFontOfSize:RCReweetedStatusContentFont];
+        retweetedContentLabel.numberOfLines = 0;
         [self addSubview:retweetedContentLabel];
+//        retweetedContentLabel.backgroundColor = [UIColor yellowColor];
         self.retweetedContentLabel = retweetedContentLabel;
         //配图
         RCPhotosView * retweetedPhotosView = [[RCPhotosView alloc]init];
@@ -62,10 +63,10 @@
    
     //配图
     self.retweetedPhotosView.frame = statusFrame.retweetedPhotosViewF;
-    if (status.retweeted_status.pic_ids.count) {  //有配图
+    if (status.retweeted_status.pic_urls.count) {  //有配图
         
         self.retweetedPhotosView.hidden = NO;
-        self.retweetedPhotosView.photos = status.retweeted_status.pic_ids;
+        self.retweetedPhotosView.photos = status.retweeted_status.pic_urls;
     }else{
         self.retweetedPhotosView.hidden = YES;
 

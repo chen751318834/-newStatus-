@@ -9,5 +9,5 @@
 #import "RCOauthResult.h"
 #import "MJExtension.h"
 @implementation RCOauthResult
-MJCodingImplementation
+
 @end

@@ -36,6 +36,8 @@
 //        cell.backgroundColor = [UIColor yellowColor];
         cell =[[RCStatusCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor colorWithWhite:0.929 alpha:1.000];
+
 
     }
     return  cell;

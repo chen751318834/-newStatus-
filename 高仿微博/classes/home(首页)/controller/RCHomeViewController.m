@@ -20,6 +20,8 @@
 #import "RCStatusCell.h"
 #import "MJRefresh.h"
 #import "RCStatusFrame.h"
+#import "RCUserInfoResult.h"
+#import "RCUserParam.h"
 @interface RCHomeViewController () 
 @property(nonatomic,weak) RCTitleButton * titleButton;
 /**
@@ -47,12 +49,15 @@
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.929 alpha:1.000];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
     // 设置导航栏
     [self setUpNavigationBar];
     
 
     //刷新控件
     [self initRefresh];
+    
+    [self loadUserInfo];
     
     [self.tableView headerBeginRefreshing];
     
@@ -67,7 +72,13 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_pop" higthligthImage:@"navigationbar_pop_highlighted"];
     RCTitleButton * titleButton = [[RCTitleButton alloc]init];
     self.titleButton = titleButton;
-   [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    if ([RCAccountTool account].name) {
+        [titleButton setTitle:[RCAccountTool account].name forState:UIControlStateNormal];
+    }else{
+        [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    }
+
+
 //    titleButton .backgroundColor = [UIColor redColor];
     [titleButton addTarget:self action:@selector(openMenu) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.titleView = titleButton;
@@ -152,7 +163,7 @@
     });
     
     return;
-    
+//
     RCStatusParam * param = [[RCStatusParam alloc]init];
     param.access_token = [RCAccountTool account].access_token;
 //    param.count = @20;
@@ -228,5 +239,27 @@
     }
     return newStatusTempArray;
 }
+/**
+ * 获取用户信息
+ *
+ */
+- (void)loadUserInfo{
+    RCUserParam * param = [[RCUserParam alloc]init];
+    param.access_token = [RCAccountTool account].access_token;
+    param.uid = [[RCAccountTool account].uid longLongValue];
 
+//    NSLog(@"uid======%@",param.uid );
+
+    [RCStatusTool userInfoWithParam:param success:^(RCUserInfoResult *result) {
+        //设置标题
+       	 [self.titleButton setTitle:result.name forState:UIControlStateNormal];
+        //储存用户名
+        RCAccount * account = [RCAccountTool account];
+        account.name = result.name;
+        [RCAccountTool saveAccount:account];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+
+}
 @end
