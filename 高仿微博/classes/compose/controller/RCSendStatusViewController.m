@@ -81,7 +81,7 @@
 
 - (void)setUpTextView{
     HWEmotionTextView * textView = [[HWEmotionTextView alloc]initWithFrame:self.view.bounds];
-    textView.alwaysBounceVertical = YES;
+//    textView.alwaysBounceVertical = YES;
     textView.delegate = self;
     textView.placeHolder = @"分享新鲜事.....";
     [self.view addSubview:textView];
@@ -147,7 +147,7 @@
 #pragma mark - UITextViewDelegate
 
 - (void)textViewDidChange:(UITextView *)textView{
-    self.navigationItem.rightBarButtonItem.enabled = textView.hasText;
+    self.navigationItem.rightBarButtonItem.enabled = (textView.attributedText.length ==0);
 
 }
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -278,9 +278,14 @@
 #pragma mark - 设置显示图片的View
 - (void)setUpPhotoView{
     RCSendStatusPhotoView * photoView = [[RCSendStatusPhotoView alloc]initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, self.view.size.height - 200)];
-    photoView.backgroundColor = [UIColor redColor];
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapView)]    ;
+    [photoView addGestureRecognizer:tap];
+//    photoView.backgroundColor = [UIColor redColor];
     [self.view addSubview:photoView];
     self.photoView = photoView;
 
+}
+- (void)tapView{
+    [self.textView becomeFirstResponder];
 }
 @end

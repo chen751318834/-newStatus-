@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RCSearchBar : UITextField
-@property(copy,nonatomic) NSString * placeHodler;
-@property(nonatomic,weak) UIColor * color;
++ (RCSearchBar *)searchBar;
 @end

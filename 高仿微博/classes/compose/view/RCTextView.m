@@ -13,6 +13,7 @@
     if ([super initWithFrame:frame]) {
         self.font = [UIFont systemFontOfSize:18];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextViewTextDidChangeNotification object:nil];
+        self.alwaysBounceVertical = YES;
     }
     
     return self;

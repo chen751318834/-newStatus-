@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RCDiscoverViewController : UITableViewController
+#import "HMCommonViewController.h"
+@interface RCDiscoverViewController : HMCommonViewController
 
 @end
