@@ -21,8 +21,17 @@
             failure(error);
         }
     }];
-
-
-
+}
++ (void)sendOneImageStatusWithparam:(RCSendStatusParam *)param data:(NSData *)data success:(void (^)(RCSendStatusResult *))success failure:(void (^)(NSError *))failure{
+    [RCNetWorkingTool post:@"https://upload.api.weibo.com/2/statuses/upload.json" params:param.keyValues data:data success:^(id json) {
+        if (success) {
+            RCSendStatusResult *result = [RCSendStatusResult objectWithKeyValues:json];
+            success(result);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 @end

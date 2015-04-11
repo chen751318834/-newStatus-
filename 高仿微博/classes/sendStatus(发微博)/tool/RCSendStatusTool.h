@@ -15,5 +15,10 @@
  *
  */
 + (void)sendOneStatusWithparam:(RCSendStatusParam *)param success:(void(^)(RCSendStatusResult * result))success failure:(void(^)(NSError * error))failure;
+/**
+ *  发送d带有图片和文字的微博
+ *
+ */
++ (void)sendOneImageStatusWithparam:(RCSendStatusParam *)param data:(NSData *)data success:(void(^)(RCSendStatusResult * result))success failure:(void(^)(NSError * error))failure;
 
 @end

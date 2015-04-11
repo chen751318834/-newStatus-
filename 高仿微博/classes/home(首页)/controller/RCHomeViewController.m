@@ -179,7 +179,7 @@
         //微博数据的数组
         NSMutableArray * newStatusesFrames = [self statusFramesWithStatuses:result.statuses];
          //插入最新的微博数据到最前面
-        NSIndexSet * indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, newStatusesFrames.count)];
+    NSIndexSet * indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, newStatusesFrames.count)];
         [self.statusFrames insertObjects:newStatusesFrames atIndexes:indexSet];
           [self.tableView reloadData];
          [self.tableView headerEndRefreshing];

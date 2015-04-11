@@ -11,6 +11,7 @@
 @protocol RCNewFeatureViewDelegate <NSObject>
 
 @optional
+
 - (void)newFeatureViewDidEnterAppButton:(RCNewFeatureView *)newFeatureView;
 - (void)newFeatureViewDidShareButton:(RCNewFeatureView *)newFeatureView;
 @end
