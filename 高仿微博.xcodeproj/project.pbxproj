@@ -344,6 +344,12 @@
 		4B9B634B1ADA839800090D8D /* RCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9B634A1ADA839800090D8D /* RCSettingViewController.m */; };
 		4B9B63501ADA83C000090D8D /* RCInformSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9B634F1ADA83C000090D8D /* RCInformSettingViewController.m */; };
 		4BA1524E1ADB54890074B1E3 /* RCUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA1524D1ADB54890074B1E3 /* RCUserTool.m */; };
+		4BA152551ADBA5FC0074B1E3 /* RCFriendshipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA152541ADBA5FC0074B1E3 /* RCFriendshipsViewController.m */; };
+		4BA152591ADBA6540074B1E3 /* RCFriendshipsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA152581ADBA6540074B1E3 /* RCFriendshipsTool.m */; };
+		4BA1525C1ADBA66D0074B1E3 /* RCFriendshipsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA1525B1ADBA66D0074B1E3 /* RCFriendshipsParam.m */; };
+		4BA1525F1ADBA6790074B1E3 /* RCFriendshipsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA1525E1ADBA6790074B1E3 /* RCFriendshipsResult.m */; };
+		4BA152621ADBAD970074B1E3 /* RCFriendShipsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA152611ADBAD970074B1E3 /* RCFriendShipsViewCell.m */; };
+		4BA152651ADBC0030074B1E3 /* RCSearchFriendsResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA152641ADBC0030074B1E3 /* RCSearchFriendsResultViewController.m */; };
 		4BA351EB1AD3BE9C00A2FCD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA351EA1AD3BE9C00A2FCD5 /* main.m */; };
 		4BA351EE1AD3BE9C00A2FCD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA351ED1AD3BE9C00A2FCD5 /* AppDelegate.m */; };
 		4BA351F61AD3BE9C00A2FCD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA351F51AD3BE9C00A2FCD5 /* Images.xcassets */; };
@@ -839,6 +845,18 @@
 		4B9B634F1ADA83C000090D8D /* RCInformSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCInformSettingViewController.m; path = ../RCInformSettingViewController.m; sourceTree = "<group>"; };
 		4BA1524C1ADB54890074B1E3 /* RCUserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserTool.h; sourceTree = "<group>"; };
 		4BA1524D1ADB54890074B1E3 /* RCUserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCUserTool.m; sourceTree = "<group>"; };
+		4BA152531ADBA5FC0074B1E3 /* RCFriendshipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFriendshipsViewController.h; sourceTree = "<group>"; };
+		4BA152541ADBA5FC0074B1E3 /* RCFriendshipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFriendshipsViewController.m; sourceTree = "<group>"; };
+		4BA152571ADBA6540074B1E3 /* RCFriendshipsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFriendshipsTool.h; sourceTree = "<group>"; };
+		4BA152581ADBA6540074B1E3 /* RCFriendshipsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFriendshipsTool.m; sourceTree = "<group>"; };
+		4BA1525A1ADBA66D0074B1E3 /* RCFriendshipsParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFriendshipsParam.h; sourceTree = "<group>"; };
+		4BA1525B1ADBA66D0074B1E3 /* RCFriendshipsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFriendshipsParam.m; sourceTree = "<group>"; };
+		4BA1525D1ADBA6790074B1E3 /* RCFriendshipsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFriendshipsResult.h; sourceTree = "<group>"; };
+		4BA1525E1ADBA6790074B1E3 /* RCFriendshipsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFriendshipsResult.m; sourceTree = "<group>"; };
+		4BA152601ADBAD970074B1E3 /* RCFriendShipsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFriendShipsViewCell.h; sourceTree = "<group>"; };
+		4BA152611ADBAD970074B1E3 /* RCFriendShipsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFriendShipsViewCell.m; sourceTree = "<group>"; };
+		4BA152631ADBC0030074B1E3 /* RCSearchFriendsResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSearchFriendsResultViewController.h; sourceTree = "<group>"; };
+		4BA152641ADBC0030074B1E3 /* RCSearchFriendsResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSearchFriendsResultViewController.m; sourceTree = "<group>"; };
 		4BA351E51AD3BE9C00A2FCD5 /* 高仿微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高仿微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA351E91AD3BE9C00A2FCD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BA351EA1AD3BE9C00A2FCD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1530,6 +1548,58 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		4BA1524F1ADBA5D00074B1E3 /* friendships(关注列表) */ = {
+			isa = PBXGroup;
+			children = (
+				4BA152561ADBA63A0074B1E3 /* tool */,
+				4BA152501ADBA5D00074B1E3 /* controller */,
+				4BA152511ADBA5D00074B1E3 /* model */,
+				4BA152521ADBA5D00074B1E3 /* view */,
+			);
+			path = "friendships(关注列表)";
+			sourceTree = "<group>";
+		};
+		4BA152501ADBA5D00074B1E3 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BA152531ADBA5FC0074B1E3 /* RCFriendshipsViewController.h */,
+				4BA152541ADBA5FC0074B1E3 /* RCFriendshipsViewController.m */,
+				4BA152631ADBC0030074B1E3 /* RCSearchFriendsResultViewController.h */,
+				4BA152641ADBC0030074B1E3 /* RCSearchFriendsResultViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BA152511ADBA5D00074B1E3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4BA1525A1ADBA66D0074B1E3 /* RCFriendshipsParam.h */,
+				4BA1525B1ADBA66D0074B1E3 /* RCFriendshipsParam.m */,
+				4BA1525D1ADBA6790074B1E3 /* RCFriendshipsResult.h */,
+				4BA1525E1ADBA6790074B1E3 /* RCFriendshipsResult.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BA152521ADBA5D00074B1E3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4BA152601ADBAD970074B1E3 /* RCFriendShipsViewCell.h */,
+				4BA152611ADBAD970074B1E3 /* RCFriendShipsViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BA152561ADBA63A0074B1E3 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				4BA152571ADBA6540074B1E3 /* RCFriendshipsTool.h */,
+				4BA152581ADBA6540074B1E3 /* RCFriendshipsTool.m */,
+			);
+			name = tool;
+			path = model/tool;
+			sourceTree = "<group>";
+		};
 		4BA351DC1AD3BE9C00A2FCD5 = {
 			isa = PBXGroup;
 			children = (
@@ -1593,6 +1663,7 @@
 		4BA352171AD3C05F00A2FCD5 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				4BA1524F1ADBA5D00074B1E3 /* friendships(关注列表) */,
 				4B9B634C1ADA83C000090D8D /* informSettting(通知设置) */,
 				4B9B63471ADA839800090D8D /* setting(设置) */,
 				4BA352201AD3C05F00A2FCD5 /* main */,
@@ -2423,13 +2494,16 @@
 				4B61F66A1AD8ECEF0018E8C2 /* MJTypeEncoding.m in Sources */,
 				4B5379741AD765950032DF36 /* MJPhotoProgressView.m in Sources */,
 				4BE8CBD61AD526AB00292996 /* MBProgressHUD+MJ.m in Sources */,
+				4BA1525C1ADBA66D0074B1E3 /* RCFriendshipsParam.m in Sources */,
 				4BE8CBD81AD526AB00292996 /* MBProgressHUD.m in Sources */,
+				4BA152651ADBC0030074B1E3 /* RCSearchFriendsResultViewController.m in Sources */,
 				4B49AB391ADA234000BC0580 /* HMBadgeView.m in Sources */,
 				4B49AB101ADA22F900BC0580 /* HWEmotionKeyboard.m in Sources */,
 				4BC6E9711AD7735F009133BB /* RCPhoto.m in Sources */,
 				4B3752841AD6042B008DFE56 /* UIImageView+WebCache.m in Sources */,
 				4B49AB0E1ADA22F900BC0580 /* HWEmotionAttachment.m in Sources */,
 				4B37527B1AD6042B008DFE56 /* SDWebImageDownloader.m in Sources */,
+				4BA152621ADBAD970074B1E3 /* RCFriendShipsViewCell.m in Sources */,
 				4BC6E9AD1AD7E68B009133BB /* RCSendStatusTool.m in Sources */,
 				4BE8CB961AD4F3DD00292996 /* RCParam.m in Sources */,
 				4BE8CB201AD4E45000292996 /* RCOauthViewController.m in Sources */,
@@ -2445,11 +2519,13 @@
 				4BE8CB6D1AD4F06800292996 /* RCOauthParam.m in Sources */,
 				4BA3523E1AD3C0FB00A2FCD5 /* RCMesageViewController.m in Sources */,
 				4B61F6681AD8ECEF0018E8C2 /* MJMethod.m in Sources */,
+				4BA152551ADBA5FC0074B1E3 /* RCFriendshipsViewController.m in Sources */,
 				4B3752771AD6042B008DFE56 /* NSData+ImageContentType.m in Sources */,
 				4B61F6691AD8ECEF0018E8C2 /* MJType.m in Sources */,
 				4B9B633A1ADA68B900090D8D /* RCMeHeaderVIew.m in Sources */,
 				4B9B63501ADA83C000090D8D /* RCInformSettingViewController.m in Sources */,
 				4B263EEE1ADA915700A221BD /* UIScrollView+MJRefresh.m in Sources */,
+				4BA1525F1ADBA6790074B1E3 /* RCFriendshipsResult.m in Sources */,
 				4B61F6731AD8F7410018E8C2 /* UIButton+Extension.m in Sources */,
 				4BA3522F1AD3C08300A2FCD5 /* RCTabBarController.m in Sources */,
 				4BE8CB6A1AD4F04000292996 /* RCOauthTool.m in Sources */,
@@ -2516,6 +2592,7 @@
 				4B49AB3F1ADA234000BC0580 /* HMCommonGroup.m in Sources */,
 				4B49AB4A1ADA23E200BC0580 /* RCNews.m in Sources */,
 				4B61F6671AD8ECEF0018E8C2 /* MJMember.m in Sources */,
+				4BA152591ADBA6540074B1E3 /* RCFriendshipsTool.m in Sources */,
 				4B49AB171ADA22F900BC0580 /* HWEmotionTextView.m in Sources */,
 				4B21F25A1AD670D0007CEAEF /* RCRetweetedStatusView.m in Sources */,
 				4B49AB411ADA234000BC0580 /* HMCommonLabelItem.m in Sources */,
