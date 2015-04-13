@@ -343,6 +343,7 @@
 		4B9B633A1ADA68B900090D8D /* RCMeHeaderVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9B63391ADA68B900090D8D /* RCMeHeaderVIew.m */; };
 		4B9B634B1ADA839800090D8D /* RCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9B634A1ADA839800090D8D /* RCSettingViewController.m */; };
 		4B9B63501ADA83C000090D8D /* RCInformSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9B634F1ADA83C000090D8D /* RCInformSettingViewController.m */; };
+		4BA1524E1ADB54890074B1E3 /* RCUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA1524D1ADB54890074B1E3 /* RCUserTool.m */; };
 		4BA351EB1AD3BE9C00A2FCD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA351EA1AD3BE9C00A2FCD5 /* main.m */; };
 		4BA351EE1AD3BE9C00A2FCD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA351ED1AD3BE9C00A2FCD5 /* AppDelegate.m */; };
 		4BA351F61AD3BE9C00A2FCD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA351F51AD3BE9C00A2FCD5 /* Images.xcassets */; };
@@ -836,6 +837,8 @@
 		4B9B634A1ADA839800090D8D /* RCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSettingViewController.m; sourceTree = "<group>"; };
 		4B9B634E1ADA83C000090D8D /* RCInformSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCInformSettingViewController.h; path = ../RCInformSettingViewController.h; sourceTree = "<group>"; };
 		4B9B634F1ADA83C000090D8D /* RCInformSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCInformSettingViewController.m; path = ../RCInformSettingViewController.m; sourceTree = "<group>"; };
+		4BA1524C1ADB54890074B1E3 /* RCUserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserTool.h; sourceTree = "<group>"; };
+		4BA1524D1ADB54890074B1E3 /* RCUserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCUserTool.m; sourceTree = "<group>"; };
 		4BA351E51AD3BE9C00A2FCD5 /* 高仿微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高仿微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA351E91AD3BE9C00A2FCD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BA351EA1AD3BE9C00A2FCD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1673,7 +1676,6 @@
 			isa = PBXGroup;
 			children = (
 				4BC6E9631AD7735F009133BB /* status */,
-				4BC6E96E1AD7735F009133BB /* user */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1717,6 +1719,7 @@
 		4BA352211AD3C05F00A2FCD5 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4BC6E96E1AD7735F009133BB /* user */,
 				4BE8CB941AD4F3DD00292996 /* RCParam.h */,
 				4BE8CB951AD4F3DD00292996 /* RCParam.m */,
 			);
@@ -1852,7 +1855,8 @@
 				4BC6E97A1AD77476009133BB /* RCUserInfoResult.h */,
 				4BC6E97B1AD77476009133BB /* RCUserInfoResult.m */,
 			);
-			path = user;
+			name = user;
+			path = "../../home(首页)/model/user";
 			sourceTree = "<group>";
 		};
 		4BC6E9901AD7E5C0009133BB /* compose */ = {
@@ -1969,6 +1973,8 @@
 			children = (
 				4BE8CB5B1AD4EC4400292996 /* RCNetWorkingTool.h */,
 				4BE8CB5C1AD4EC4400292996 /* RCNetWorkingTool.m */,
+				4BA1524C1ADB54890074B1E3 /* RCUserTool.h */,
+				4BA1524D1ADB54890074B1E3 /* RCUserTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2460,6 +2466,7 @@
 				4B49AB0C1ADA22F900BC0580 /* HWConst.m in Sources */,
 				4BC6E9721AD7735F009133BB /* RCStatus.m in Sources */,
 				4B61F6661AD8ECEF0018E8C2 /* MJIvar.m in Sources */,
+				4BA1524E1ADB54890074B1E3 /* RCUserTool.m in Sources */,
 				4B49AB3C1ADA234000BC0580 /* HMCommonButtonItem.m in Sources */,
 				4B50170E1AD4176E0043B17E /* RCSearchBar.m in Sources */,
 				4BC6E99F1AD7E5C0009133BB /* RCComposeTwoCenterView.m in Sources */,
