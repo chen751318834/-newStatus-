@@ -11,6 +11,9 @@
 		4B06F0BF1AD3F44B0032E46E /* RCTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B06F0BE1AD3F44B0032E46E /* RCTitleButton.m */; };
 		4B1A39A71AD4BB560046CA12 /* RCNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1A39A61AD4BB560046CA12 /* RCNewFeatureViewController.m */; };
 		4B1A39AB1AD4BC870046CA12 /* RCNewFeatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1A39AA1AD4BC870046CA12 /* RCNewFeatureView.m */; };
+		4B1DD88C1ADD03D000D10974 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1DD88B1ADD03D000D10974 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4B1DD88E1ADD042400D10974 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1DD88D1ADD042400D10974 /* libicucore.dylib */; };
+		4B1DD8911ADD09B900D10974 /* RCTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1DD8901ADD09B900D10974 /* RCTextPart.m */; };
 		4B21F2511AD666CF007CEAEF /* NSDate+RC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B21F2501AD666CF007CEAEF /* NSDate+RC.m */; };
 		4B21F2541AD66B0E007CEAEF /* RCIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B21F2531AD66B0E007CEAEF /* RCIconView.m */; };
 		4B21F2571AD6709F007CEAEF /* RCToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B21F2561AD6709F007CEAEF /* RCToolBar.m */; };
@@ -420,6 +423,11 @@
 		4B1A39A61AD4BB560046CA12 /* RCNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNewFeatureViewController.m; sourceTree = "<group>"; };
 		4B1A39A91AD4BC870046CA12 /* RCNewFeatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNewFeatureView.h; sourceTree = "<group>"; };
 		4B1A39AA1AD4BC870046CA12 /* RCNewFeatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCNewFeatureView.m; sourceTree = "<group>"; };
+		4B1DD88A1ADD03D000D10974 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		4B1DD88B1ADD03D000D10974 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		4B1DD88D1ADD042400D10974 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4B1DD88F1ADD09B900D10974 /* RCTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextPart.h; sourceTree = "<group>"; };
+		4B1DD8901ADD09B900D10974 /* RCTextPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTextPart.m; sourceTree = "<group>"; };
 		4B21F24F1AD666CF007CEAEF /* NSDate+RC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RC.h"; sourceTree = "<group>"; };
 		4B21F2501AD666CF007CEAEF /* NSDate+RC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RC.m"; sourceTree = "<group>"; };
 		4B21F2521AD66B0E007CEAEF /* RCIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIconView.h; sourceTree = "<group>"; };
@@ -963,6 +971,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1DD88E1ADD042400D10974 /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,6 +1010,16 @@
 				4B1A39AA1AD4BC870046CA12 /* RCNewFeatureView.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		4B1DD8891ADD03D000D10974 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				4B1DD88A1ADD03D000D10974 /* RegexKitLite.h */,
+				4B1DD88B1ADD03D000D10974 /* RegexKitLite.m */,
+			);
+			name = RegexKitLite;
+			path = "../../../../../../../../../Users/apple/学习资源/LM/ios/10月份-新浪微博项目实战/微薄项目资料/资料/代码/黑马1期-微博/黑马微博/Classes/Main(主要)/Lib/RegexKitLite";
 			sourceTree = "<group>";
 		};
 		4B263ED71ADA915700A221BD /* MJRefresh */ = {
@@ -1491,6 +1510,7 @@
 		4B7B5C471AD40804005775A7 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				4B1DD8891ADD03D000D10974 /* RegexKitLite */,
 				4B263ED71ADA915700A221BD /* MJRefresh */,
 				4B49A9131ADA22F900BC0580 /* EmotionKeyBoard */,
 				4B49AB1E1ADA234000BC0580 /* RCUITableView */,
@@ -1603,6 +1623,7 @@
 		4BA351DC1AD3BE9C00A2FCD5 = {
 			isa = PBXGroup;
 			children = (
+				4B1DD88D1ADD042400D10974 /* libicucore.dylib */,
 				4BA351E71AD3BE9C00A2FCD5 /* 高仿微博 */,
 				4BA352011AD3BE9C00A2FCD5 /* 高仿微博Tests */,
 				4BA351E61AD3BE9C00A2FCD5 /* Products */,
@@ -1912,6 +1933,8 @@
 				4BC6E96B1AD7735F009133BB /* RCStatusParam.m */,
 				4BC6E96C1AD7735F009133BB /* RCStatusResult.h */,
 				4BC6E96D1AD7735F009133BB /* RCStatusResult.m */,
+				4B1DD88F1ADD09B900D10974 /* RCTextPart.h */,
+				4B1DD8901ADD09B900D10974 /* RCTextPart.m */,
 			);
 			path = status;
 			sourceTree = "<group>";
@@ -2564,6 +2587,7 @@
 				4B25B4BE1AD5382D00943575 /* RCStatusCell.m in Sources */,
 				4B3752821AD6042B008DFE56 /* UIImage+WebP.m in Sources */,
 				4BE8CBCC1AD5254D00292996 /* AFURLConnectionOperation.m in Sources */,
+				4B1DD88C1ADD03D000D10974 /* RegexKitLite.m in Sources */,
 				4BC6E9B61AD7F4DB009133BB /* RCTextView.m in Sources */,
 				4B3752781AD6042B008DFE56 /* SDImageCache.m in Sources */,
 				4B25B4C41AD5396D00943575 /* RCOriginalStastusView.m in Sources */,
@@ -2617,6 +2641,7 @@
 				4B3752871AD63DA9008DFE56 /* RCPhotosView.m in Sources */,
 				4B9B63331ADA560100090D8D /* RCCollectionViewCell.m in Sources */,
 				4B49AB3B1ADA234000BC0580 /* HMCommonArrowItem.m in Sources */,
+				4B1DD8911ADD09B900D10974 /* RCTextPart.m in Sources */,
 				4BE8CBCA1AD5254D00292996 /* AFNetworkReachabilityManager.m in Sources */,
 				4BE8CBCE1AD5254D00292996 /* AFURLResponseSerialization.m in Sources */,
 				4B49AB161ADA22F900BC0580 /* HWEmotionTabBarButton.m in Sources */,
@@ -2737,6 +2762,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "高仿微博/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2748,6 +2774,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "高仿微博/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
