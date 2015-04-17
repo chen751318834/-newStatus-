@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class RCStatus;
 
 @interface RCUser : NSObject
 /**  字符串型的用户UID*/
@@ -16,7 +17,7 @@
 /**  用户所在地*/
 @property(copy,nonatomic) NSString * location;
 /**  用户个人描述*/
-//@property(copy,nonatomic) NSString * description;
+@property(copy,nonatomic) NSString * desc;
 /**  	用户博客地址*/
 @property(copy,nonatomic) NSString * url;
 /**  用户头像地址（中图）*/
@@ -34,7 +35,7 @@
 @property(copy,nonatomic) NSString * avatar_large;
 /**  粉丝数  */
 @property (nonatomic, assign)int followers_count;
-/**  	关注数  */
+/**  关注数  */
 @property (nonatomic, assign)int friends_count;
 /**  	微博数  */
 @property (nonatomic, assign)int statuses_count;
@@ -64,6 +65,6 @@
 @property (nonatomic, assign) int mbrank;
 /** 会员类型 */
 @property (nonatomic, assign) int mbtype;
-
+@property(nonatomic,strong) RCStatus * status;
 
 @end

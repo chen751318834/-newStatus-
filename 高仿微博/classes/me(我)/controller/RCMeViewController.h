@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RCMeViewController : UITableViewController
+#import "HMCommonViewController.h"
+@interface RCMeViewController : HMCommonViewController
 
 @end

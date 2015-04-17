@@ -26,7 +26,7 @@
 ///**
 // *单页返回的记录条数，最大不超过100，默认为20。
 // */
-//@property (nonatomic,  strong)NSNumber * count;
+@property (nonatomic,  strong)NSNumber * count;
 ///**
 // *  返回结果的页码，默认为1。
 //

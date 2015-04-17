@@ -7,9 +7,15 @@
 //
 
 #import "RCParam.h"
-
+#import "RCAccountTool.h"
 @implementation RCParam
 + (id)param{
     return  [[self alloc]init];
+}
+- (instancetype)init{
+    if ([super init]) {
+        self.access_token = [RCAccountTool account].access_token;
+    }
+    return self;
 }
 @end

@@ -9,6 +9,7 @@
 #import "RCDiscoverViewController.h"
 #import "RCSearchBar.h"
 #import "HMCommonGroup.h"
+#import "RCDisCoverHeaderView.h"
 #import "HMCommonItem.h"
 @interface RCDiscoverViewController () <UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak) RCSearchBar * searchBar;
@@ -20,9 +21,19 @@
     [super viewDidLoad];
     [self setUpNavigationBar];
     [self setupGroups];
+    [self setUpHeaerView];
+    self.tableView.contentInset = UIEdgeInsetsMake(70, 0, 40, 0);
+
+}
+#pragma mark 表格的上面的view
+- (void)setUpHeaerView{
+    self.tableView.tableHeaderView = [RCDisCoverHeaderView headerView];
+    
+   
 
 }
 #pragma mark 设置导航栏
+
 - (void)setUpNavigationBar{
     RCSearchBar * searchBar = [[RCSearchBar alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30)];
     self.searchBar = searchBar;
@@ -31,11 +42,14 @@
     self.navigationItem.titleView = searchBar;
 
 }
+#pragma mark - tablevew datasoure
+
 
 #pragma mark - tablevew delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
 //    NSLog(@"scrollViewDidScroll");
     [self.searchBar endEditing:YES];
+
 
 }
 

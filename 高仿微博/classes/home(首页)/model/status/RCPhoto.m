@@ -7,8 +7,9 @@
 //
 
 #import "RCPhoto.h"
-
+#import "MJExtension.h"
 @implementation RCPhoto
+MJCodingImplementation
 - (NSString *)bmiddle_pic
 {
     return [self.thumbnail_pic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];

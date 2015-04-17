@@ -22,6 +22,11 @@
     [self setUpNavigationBarItem];
 
 }
+- (void)viewDidLoad{
+
+    [super viewDidLoad];
+    self.interactivePopGestureRecognizer.delegate = nil;
+}
 + (void)setUpNavigationBarItem{
     UIBarButtonItem * item = [UIBarButtonItem appearance];
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
@@ -47,13 +52,26 @@
 
 
 }
-- (void)showViewController:(UIViewController *)vc sender:(id)sender{
-       [super showViewController:vc sender:sender];
-    vc.hidesBottomBarWhenPushed = YES;
-    vc.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_friendsearch" higthligthImage:@"navigationbar_friendsearch_highlighted"];
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (self.viewControllers.count>0) {
+       
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_back" higthligthImage:@"navigationbar_back_highlighted" targrt:self action:@selector(back)];
+        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_more" higthligthImage:@"navigationbar_more_highlighted" targrt:self action:@selector(more)];
+         viewController.hidesBottomBarWhenPushed = YES;
+      }
+    
+    [super pushViewController:viewController animated:animated];
+
 
 }
+- (void)back{
+    [self popViewControllerAnimated:YES];
 
-
+}
+- (void)more{
+    [self popToRootViewControllerAnimated:YES];
+    
+}
 
 @end

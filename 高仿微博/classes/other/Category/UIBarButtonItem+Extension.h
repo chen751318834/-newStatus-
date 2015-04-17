@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (Extension)
-+ (UIBarButtonItem *)itemWithImage:(NSString *)image higthligthImage:(NSString *)higthligthImage;
++ (UIBarButtonItem *)itemWithImage:(NSString *)image higthligthImage:(NSString *)higthligthImage targrt:(id)target action:(SEL)action;
 
 @end

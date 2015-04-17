@@ -10,4 +10,6 @@
 
 @interface RCParam : NSObject
 +(id)param;
+@property(copy,nonatomic) NSString * access_token;
+
 @end

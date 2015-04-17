@@ -55,9 +55,10 @@ static const CGFloat RCMargin = 10;
     
     
     //正文
+
     CGFloat  contentX = iconX;
     CGFloat  contentY = MAX(CGRectGetMaxY(_iconViewF), CGRectGetMaxY(_timeLabelF))+ RCMargin;
-    CGSize  contentLabelSize = [self.status.text boundingRectWithSize:CGSizeMake( [UIScreen mainScreen].bounds.size.width - 2*contentX, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:RCUContentFont]} context:nil].size;
+    CGSize  contentLabelSize = [status.attributedText boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 2*contentX, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
     _contentLabelF = CGRectMake(contentX, contentY, contentLabelSize.width, contentLabelSize.height);
     CGFloat originalStastusViewH = 0;
 
@@ -79,8 +80,9 @@ static const CGFloat RCMargin = 10;
     CGFloat originalStastusViewW = [UIScreen mainScreen].bounds.size.width - 4*originalStastusViewX;
     _originalStastusViewF = CGRectMake(originalStastusViewX, originalStastusViewY, originalStastusViewW,originalStastusViewH);
     
-        CGFloat toolBarY = CGRectGetMaxY(_originalStastusViewF)+RCMargin;
+        CGFloat toolBarY = 0;
     CGFloat statusContentViewH= 0;
+        CGFloat stastusViewH = 0;
     if (status.retweeted_status) {  //有转发微博
 //        
         //转发微博的View
@@ -93,7 +95,7 @@ static const CGFloat RCMargin = 10;
         CGFloat reweetedContentLabelX = RCMargin;
         CGFloat reweetedContentLabelY = 0;
         CGFloat reweetedContentLabelW = reweetedStatusViewW- 2*RCMargin;
-        CGSize  reweetedContentLabelSize = [self.status.retweeted_status.text boundingRectWithSize:CGSizeMake( reweetedContentLabelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:RCReweetedStatusContentFont]} context:nil].size;
+        CGSize  reweetedContentLabelSize = [status.retweetedAttributedText boundingRectWithSize:CGSizeMake(reweetedContentLabelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
 //
         _retweetedContentLabelF = CGRectMake(reweetedContentLabelX, reweetedContentLabelY, reweetedContentLabelSize.width, reweetedContentLabelSize.height);
 //
@@ -116,11 +118,18 @@ static const CGFloat RCMargin = 10;
                _retweetedStatusViewF = CGRectMake(reweetedStatusViewX, reweetedStatusViewY, reweetedStatusViewW,reweetedStatusViewH);
         
           toolBarY = CGRectGetMaxY(_retweetedStatusViewF)+1;
+        stastusViewH = CGRectGetMaxY(_retweetedStatusViewF);
     }else{  //没有转发微博
         toolBarY = CGRectGetMaxY(_originalStastusViewF)+1;
+        stastusViewH = CGRectGetMaxY(_originalStastusViewF);
 
-       
     }
+    CGFloat stastusViewX = 0;
+    CGFloat stastusViewY = 0;
+    CGFloat stastusViewW = [UIScreen mainScreen].bounds.size.width - 4*originalStastusViewX;
+
+
+    _statusViewF = CGRectMake(stastusViewX, stastusViewY, stastusViewW,stastusViewH);
 
     
     //工具条的view

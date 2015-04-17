@@ -21,6 +21,9 @@
  *  微博信息内容
  */
 @property(copy,nonatomic) NSString * text;
+@property(copy,nonatomic) NSAttributedString * attributedText;
+
+
 /**
  *  	微博来源
  */
@@ -52,6 +55,8 @@
  被转发的原微博信息字段，当该微博为转发微博时返回
  */
 @property(strong,nonatomic) RCStatus * retweeted_status;
+@property(copy,nonatomic) NSAttributedString * retweetedAttributedText;
+
 /**
  *  微博作者的用户信息字段
  */
@@ -60,6 +65,4 @@
  *  	微博配图ID。多图时返回多图ID，用来拼接图片url。用返回字段thumbnail_pic的地址配上该返回字段的图片ID，即可得到多个图片url。
  */
 @property(strong,nonatomic) NSArray * pic_urls;
-
-
 @end

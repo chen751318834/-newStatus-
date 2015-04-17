@@ -147,7 +147,7 @@
 #pragma mark - UITextViewDelegate
 
 - (void)textViewDidChange:(UITextView *)textView{
-    self.navigationItem.rightBarButtonItem.enabled = (textView.attributedText.length ==0);
+    self.navigationItem.rightBarButtonItem.enabled = (textView.attributedText.length !=0);
 
 }
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -230,7 +230,7 @@
             break;
         case RCSendStatusToolBarButtonTypeMoticon:
         {
-            HWEmotionKeyboard * keyBoard = [[HWEmotionKeyboard alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 258)];
+            HWEmotionKeyboard * keyBoard = [[HWEmotionKeyboard alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 210)];
             if (self.textView.inputView == nil) {
                 //正在显示系统自动键盘
                 self.textView.inputView = keyBoard;

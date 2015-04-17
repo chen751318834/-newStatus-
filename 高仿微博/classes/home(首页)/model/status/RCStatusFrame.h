@@ -19,6 +19,7 @@ static const CGFloat RCReweetedStatusContentFont = 14;
  *  cell的View的Frame
  */
 @property(nonatomic,assign,readonly) CGRect  statusContentViewF;
+
 /*****************************************************/
 /************ 原创微博整体 **********/
 @property(nonatomic,assign,readonly) CGRect originalStastusViewF;
@@ -71,5 +72,6 @@ static const CGFloat RCReweetedStatusContentFont = 14;
  *  cell的高度
  */
 @property (nonatomic, assign)CGFloat cellHigth;
+@property(nonatomic,assign,readonly) CGRect statusViewF;
 
 @end
