@@ -360,6 +360,12 @@
 		4BB2DFAC1AE0AAD7000D2B6E /* RCRepost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFAB1AE0AAD7000D2B6E /* RCRepost.m */; };
 		4BB2DFB01AE0CB0A000D2B6E /* RCDetailStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFAE1AE0CB0A000D2B6E /* RCDetailStatusCell.m */; };
 		4BB2DFB41AE0CD31000D2B6E /* RCCommentFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFB31AE0CD31000D2B6E /* RCCommentFrame.m */; };
+		4BB2DFBC1AE0FFFA000D2B6E /* RCFollowerParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFBB1AE0FFFA000D2B6E /* RCFollowerParam.m */; };
+		4BB2DFBF1AE10029000D2B6E /* RCFollowerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFBE1AE10029000D2B6E /* RCFollowerResult.m */; };
+		4BB2DFC21AE100D6000D2B6E /* RCFollowerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFC11AE100D6000D2B6E /* RCFollowerTool.m */; };
+		4BB2DFC51AE10192000D2B6E /* RCFollowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFC41AE10192000D2B6E /* RCFollowerViewController.m */; };
+		4BB2DFC81AE1022B000D2B6E /* RCFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFC71AE1022B000D2B6E /* RCFollower.m */; };
+		4BB2DFCB1AE105A6000D2B6E /* RCFollowersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFCA1AE105A6000D2B6E /* RCFollowersCell.m */; };
 		4BC6E9711AD7735F009133BB /* RCPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6E9651AD7735F009133BB /* RCPhoto.m */; };
 		4BC6E9721AD7735F009133BB /* RCStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6E9671AD7735F009133BB /* RCStatus.m */; };
 		4BC6E9731AD7735F009133BB /* RCStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6E9691AD7735F009133BB /* RCStatusFrame.m */; };
@@ -900,6 +906,18 @@
 		4BB2DFAE1AE0CB0A000D2B6E /* RCDetailStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDetailStatusCell.m; sourceTree = "<group>"; };
 		4BB2DFB21AE0CD31000D2B6E /* RCCommentFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommentFrame.h; sourceTree = "<group>"; };
 		4BB2DFB31AE0CD31000D2B6E /* RCCommentFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCommentFrame.m; sourceTree = "<group>"; };
+		4BB2DFBA1AE0FFFA000D2B6E /* RCFollowerParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFollowerParam.h; sourceTree = "<group>"; };
+		4BB2DFBB1AE0FFFA000D2B6E /* RCFollowerParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFollowerParam.m; sourceTree = "<group>"; };
+		4BB2DFBD1AE10029000D2B6E /* RCFollowerResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFollowerResult.h; sourceTree = "<group>"; };
+		4BB2DFBE1AE10029000D2B6E /* RCFollowerResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFollowerResult.m; sourceTree = "<group>"; };
+		4BB2DFC01AE100D6000D2B6E /* RCFollowerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFollowerTool.h; sourceTree = "<group>"; };
+		4BB2DFC11AE100D6000D2B6E /* RCFollowerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFollowerTool.m; sourceTree = "<group>"; };
+		4BB2DFC31AE10192000D2B6E /* RCFollowerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFollowerViewController.h; sourceTree = "<group>"; };
+		4BB2DFC41AE10192000D2B6E /* RCFollowerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFollowerViewController.m; sourceTree = "<group>"; };
+		4BB2DFC61AE1022B000D2B6E /* RCFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFollower.h; sourceTree = "<group>"; };
+		4BB2DFC71AE1022B000D2B6E /* RCFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFollower.m; sourceTree = "<group>"; };
+		4BB2DFC91AE105A6000D2B6E /* RCFollowersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCFollowersCell.h; sourceTree = "<group>"; };
+		4BB2DFCA1AE105A6000D2B6E /* RCFollowersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCFollowersCell.m; sourceTree = "<group>"; };
 		4BC6E9641AD7735F009133BB /* RCPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPhoto.h; sourceTree = "<group>"; };
 		4BC6E9651AD7735F009133BB /* RCPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCPhoto.m; sourceTree = "<group>"; };
 		4BC6E9661AD7735F009133BB /* RCStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatus.h; sourceTree = "<group>"; };
@@ -1737,6 +1755,7 @@
 		4BA352171AD3C05F00A2FCD5 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				4BB2DFB51AE0FFE8000D2B6E /* followers(粉丝) */,
 				4BA1524F1ADBA5D00074B1E3 /* friendships(关注列表) */,
 				4B9B634C1ADA83C000090D8D /* informSettting(通知设置) */,
 				4B9B63471ADA839800090D8D /* setting(设置) */,
@@ -1959,6 +1978,57 @@
 				4BA352311AD3C0A500A2FCD5 /* RCNavigationController.m */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		4BB2DFB51AE0FFE8000D2B6E /* followers(粉丝) */ = {
+			isa = PBXGroup;
+			children = (
+				4BB2DFB61AE0FFE8000D2B6E /* controller */,
+				4BB2DFB71AE0FFE8000D2B6E /* model */,
+				4BB2DFB81AE0FFE8000D2B6E /* tool */,
+				4BB2DFB91AE0FFE8000D2B6E /* view */,
+			);
+			path = "followers(粉丝)";
+			sourceTree = "<group>";
+		};
+		4BB2DFB61AE0FFE8000D2B6E /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BB2DFC31AE10192000D2B6E /* RCFollowerViewController.h */,
+				4BB2DFC41AE10192000D2B6E /* RCFollowerViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BB2DFB71AE0FFE8000D2B6E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4BB2DFBA1AE0FFFA000D2B6E /* RCFollowerParam.h */,
+				4BB2DFBB1AE0FFFA000D2B6E /* RCFollowerParam.m */,
+				4BB2DFBD1AE10029000D2B6E /* RCFollowerResult.h */,
+				4BB2DFBE1AE10029000D2B6E /* RCFollowerResult.m */,
+				4BB2DFC61AE1022B000D2B6E /* RCFollower.h */,
+				4BB2DFC71AE1022B000D2B6E /* RCFollower.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BB2DFB81AE0FFE8000D2B6E /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				4BB2DFC01AE100D6000D2B6E /* RCFollowerTool.h */,
+				4BB2DFC11AE100D6000D2B6E /* RCFollowerTool.m */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		4BB2DFB91AE0FFE8000D2B6E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4BB2DFC91AE105A6000D2B6E /* RCFollowersCell.h */,
+				4BB2DFCA1AE105A6000D2B6E /* RCFollowersCell.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		4BC6E9631AD7735F009133BB /* status */ = {
@@ -2649,6 +2719,7 @@
 				4B1A39A71AD4BB560046CA12 /* RCNewFeatureViewController.m in Sources */,
 				4B49AB3D1ADA234000BC0580 /* HMCommonCell.m in Sources */,
 				4BE9F3D51ADFA6F8005A4379 /* RCPhotosView.m in Sources */,
+				4BB2DFBF1AE10029000D2B6E /* RCFollowerResult.m in Sources */,
 				4BE8CB5D1AD4EC4400292996 /* RCNetWorkingTool.m in Sources */,
 				4BE9F3AF1ADF4838005A4379 /* FMDatabaseQueue.m in Sources */,
 				4B263EEA1ADA915700A221BD /* MJRefreshConst.m in Sources */,
@@ -2715,6 +2786,7 @@
 				4BE8CBAF1AD50D4E00292996 /* RCStatusTool.m in Sources */,
 				4B263EED1ADA915700A221BD /* UIScrollView+MJExtension.m in Sources */,
 				4B0C40671ADDFB4000793C70 /* RCSpecialText.m in Sources */,
+				4BB2DFCB1AE105A6000D2B6E /* RCFollowersCell.m in Sources */,
 				4BE9F3D91ADFA6F8005A4379 /* RCStatusContentView.m in Sources */,
 				4B06F0BC1AD3F22B0032E46E /* UIBarButtonItem+Extension.m in Sources */,
 				4B49AB0C1ADA22F900BC0580 /* HWConst.m in Sources */,
@@ -2734,9 +2806,12 @@
 				4BC6E9741AD7735F009133BB /* RCStatusParam.m in Sources */,
 				4BA3523B1AD3C0E500A2FCD5 /* RCMeViewController.m in Sources */,
 				4BA351EE1AD3BE9C00A2FCD5 /* AppDelegate.m in Sources */,
+				4BB2DFC51AE10192000D2B6E /* RCFollowerViewController.m in Sources */,
 				4BE8CBC81AD5254D00292996 /* AFHTTPRequestOperationManager.m in Sources */,
+				4BB2DFC21AE100D6000D2B6E /* RCFollowerTool.m in Sources */,
 				4BE9F3D41ADFA6F8005A4379 /* RCOriginalStastusView.m in Sources */,
 				4BA7F66A1ADFB3BD00232EEF /* RCDetailStatusTopView.m in Sources */,
+				4BB2DFC81AE1022B000D2B6E /* RCFollower.m in Sources */,
 				4B49AB3E1ADA234000BC0580 /* HMCommonCenterItem.m in Sources */,
 				4B5379731AD765950032DF36 /* MJPhotoLoadingView.m in Sources */,
 				4B37527E1AD6042B008DFE56 /* SDWebImagePrefetcher.m in Sources */,
@@ -2787,6 +2862,7 @@
 				4BB2DFB01AE0CB0A000D2B6E /* RCDetailStatusCell.m in Sources */,
 				4BE9F3B01ADF4838005A4379 /* FMResultSet.m in Sources */,
 				4BC6E9731AD7735F009133BB /* RCStatusFrame.m in Sources */,
+				4BB2DFBC1AE0FFFA000D2B6E /* RCFollowerParam.m in Sources */,
 				4BC6E9AA1AD7E66E009133BB /* RCSendStatusParam.m in Sources */,
 				4B49AB181ADA22F900BC0580 /* HWEmotionTool.m in Sources */,
 				4B49AB0D1ADA22F900BC0580 /* HWEmotion.m in Sources */,
