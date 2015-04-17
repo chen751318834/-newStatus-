@@ -17,4 +17,5 @@
  *  文字的范围
  */
 @property (nonatomic, assign)NSRange range;
+- (NSString *)textWithRange:(NSRange )range;
 @end

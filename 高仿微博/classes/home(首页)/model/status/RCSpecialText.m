@@ -14,4 +14,9 @@ MJCodingImplementation
     return [NSString stringWithFormat:@"%@----%@",self.text,NSStringFromRange(self.range)];
     
 }
+- (NSString *)textWithRange:(NSRange)range{
+
+    return NSStringFromRange(range);
+
+}
 @end

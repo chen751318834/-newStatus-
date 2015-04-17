@@ -38,7 +38,6 @@
     CGPoint  point = [touch locationInView:touch.view];
     //取出存放 RCSpecialText模型的数组
        NSArray * specials = [self.attributedText attribute:@"specials" atIndex:0 effectiveRange:NULL];
-//    NSLog(@"%@",specials);
     //是否是特殊字符
     BOOL isSpecial = NO;
     //遍历 RCSpecialText模型的数组
@@ -60,7 +59,7 @@
             }
             if (CGRectContainsPoint(rect, point)) {
                 isSpecial = YES;    //是特殊字符
-
+         
                 break;
             }
         }
@@ -72,6 +71,7 @@
                 if (rect.size.width == 0 && rect.size.height == 0) {
                     continue;
                 }
+
                 //插入点中时的背景
                 UIView * cover = [[UIView alloc]init];
                 cover.tag = RCStatusTextViewCoverTag;

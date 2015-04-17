@@ -14,6 +14,7 @@
 #import "RCUserTool.h"
 #import "RCUser.h"
 #import "RCFriendshipsViewController.h"
+#import "RCFollowerViewController.h"
 @interface RCMeViewController () <RCMeHeaderVIewDelegate>
 
 @end
@@ -143,16 +144,13 @@
 - (void)meHeaderVIew:(RCMeHeaderVIew *)headerView didCilckedButtonType:(RCMeHeaderVIewButtonType)buttonType{
     switch (buttonType) {
         case RCMeHeaderVIewButtonTypeStauts:
-            NSLog(@"RCMeHeaderVIewButtonTypeStauts");
             break;
         case RCMeHeaderVIewButtonTypeFriends:
-            NSLog(@"RCMeHeaderVIewButtonTypeFriends");
             [self.navigationController pushViewController:[[RCFriendshipsViewController alloc] init] animated:YES];
 
             break;
         case RCMeHeaderVIewButtonTypeFollowers:
-            NSLog(@"RCMeHeaderVIewButtonTypeFollowers");
-
+                        [self.navigationController pushViewController:[[RCFollowerViewController alloc] init] animated:YES];
             break;
         default:
             break;
