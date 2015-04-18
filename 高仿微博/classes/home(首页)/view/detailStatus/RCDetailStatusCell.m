@@ -36,18 +36,22 @@
     return cell;
 
 }
-- (instancetype)initWithFrame:(CGRect)frame{
-    if ([super initWithFrame:frame]) {
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        
         //头像
         UIImageView *iconView = [[UIImageView alloc]init];
         [self addSubview:iconView];
         self.iconView = iconView;
-//        iconView.backgroundColor = [UIColor redColor];
         //赞
         UIImageView * likeView = [[UIImageView alloc]init];
         [self addSubview:likeView];
         likeView.image = [UIImage imageNamed:@"statusdetail_icon_like"];
         self.likeView = likeView;
+        
         //用户名
         UILabel *userNameLabel = [[UILabel alloc]init];
         [self addSubview:userNameLabel];
@@ -59,26 +63,25 @@
         UILabel *timeLabel = [[UILabel alloc]init];
         [self addSubview:timeLabel];
         timeLabel.font = [UIFont systemFontOfSize:RCTimeFont];
-   
+        
         //正文
         RCStatusTextView *contentLabel = [[RCStatusTextView alloc]init];
         [self addSubview:contentLabel];
-//        contentLabel.font = [UIFont systemFontOfSize:RCUContentFont];
+        //        contentLabel.font = [UIFont systemFontOfSize:RCUContentFont];
         self.contentLabel = contentLabel;
-
+        NSLog(@"initWithFrame----%@",self.subviews);
     }
     
-    return self;
-    
-    
+    return  self;
 }
 - (void)setCommentFrame:(RCCommentFrame *)commentFrame{
     _commentFrame = commentFrame;
     RCComment * comment = commentFrame.comment;
     RCUser * user = comment.user;
+
     //头像
+    [self.iconView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default"]];
     self.iconView.frame = commentFrame.iconViewF;
-    [self.imageView setImageWithURL:[NSURL URLWithString:user.avatar_large] placeholderImage:[UIImage imageNamed:@"avatar_default"]];
     
     
     //用户名
@@ -94,7 +97,7 @@
     //内容
     self.contentLabel.frame = commentFrame.contentLabelF;
     self.contentLabel.attributedText =  comment.attributedText;
-    
+
     //赞
     self.likeView.frame = commentFrame.likeViewF;
     

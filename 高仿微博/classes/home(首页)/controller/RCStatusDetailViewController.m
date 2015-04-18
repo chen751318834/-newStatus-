@@ -29,11 +29,27 @@
 @property(strong,nonatomic) RCDetailStatusTopView * topView;
 @property(strong,nonatomic) NSMutableArray * commentFrames;
 @property(strong,nonatomic) NSMutableArray * repostFrames;
+@property(strong,nonatomic) UIImageView * emptyView;
 
 @end
 
 @implementation RCStatusDetailViewController
 #pragma mark - 初始化
+-(UIImageView *)emptyView{
+    if (!_emptyView) {
+        CGFloat W  = 100;
+        CGFloat H = W;
+        CGFloat X = (self.view.frame.size.width - W)/2;
+        CGFloat Y = self.tableView.tableHeaderView.frame.size.height +50;
+        
+        self.emptyView =[[UIImageView alloc]initWithFrame:CGRectMake(X, Y, W, H)];
+        [self.emptyView setImage:[UIImage imageNamed:@"statusdetail_icon_empty_failed"]];
+        [self.tableView addSubview:_emptyView];
+        self.emptyView.hidden = (self.repostFrames.count !=0 || self.commentFrames.count !=0);
+        
+    }
+    return _emptyView;
+}
 
 -(NSMutableArray *)commentFrames{
     if (!_commentFrames) {
@@ -49,7 +65,8 @@
 }
 -(RCDetailStatusTopView *)topView{
     if (!_topView) {
-        self.topView = [[RCDetailStatusTopView alloc]initWithFrame:CGRectMake(0, 0, self.view.size.width, 44)];
+
+        self.topView = [[RCDetailStatusTopView alloc]initWithFrame:CGRectMake(0,0,self.view.frame.size.width,44 )];
         self.topView.status = self.statusFrame.status;
         self.topView.delegate = self;
     
@@ -61,17 +78,23 @@
     [super viewDidLoad];
     self.title = @"微博正文";
     [self setUpTableView];
+    self.tableView.backgroundColor                = [UIColor colorWithWhite:0.929 alpha:1.000];
+    NSLog(@"%@",self.emptyView);
     [self setUpToolBar];
     self.view.backgroundColor = [UIColor whiteColor];
 }
 - (void)setUpTableView{
     UITableView * tableView  = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.size.width, self.view.size.height - 44) style:UITableViewStylePlain];
-    tableView.separatorStyle = UITableViewCellAccessoryNone;
+    if (self.commentFrames.count ==0 || self.repostFrames.count == 0) {
+        tableView.separatorStyle = UITableViewCellAccessoryNone;
+
+    }
+    
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
     tableView.sectionHeaderHeight = 44;
-    
+
 
     if (self.isReweetedStatus) {
         RCRetweetedStatusView * headerView = [[RCRetweetedStatusView alloc]init];
@@ -106,11 +129,15 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (self.topView.selectedButtonType == RCDetailStatusTopViewButtonTypeCommend) {
-        return self.commentFrames.count;
+    
+        if (self.topView.selectedButtonType == RCDetailStatusTopViewButtonTypeCommend) {
+
+       return  self.commentFrames.count?self.commentFrames.count:0;
     }else{
-    return self.repostFrames.count;
+        return  self.repostFrames.count?self.repostFrames.count:0;
+
     }
+  
    
 }
 
@@ -122,11 +149,16 @@
     RCDetailStatusCell * cell = [RCDetailStatusCell cellWithTableView:tableView];
     
        if (self.topView.selectedButtonType == RCDetailStatusTopViewButtonTypeCommend) {
-        RCCommentFrame * cmtFrame = self.commentFrames[indexPath.row];
-           cell.commentFrame = cmtFrame;
+           if (self.commentFrames.count) {
+            RCCommentFrame * cmtFrame = self.commentFrames[indexPath.row];
+            cell.commentFrame         = cmtFrame;
+           }
+
     } else{
-        RCCommentFrame * repost = self.repostFrames[indexPath.row];
-        cell.commentFrame = repost;
+        if (self.repostFrames.count) {
+            RCCommentFrame * repost   = self.repostFrames[indexPath.row];
+            cell.commentFrame         = repost;
+        }
 
     }
 
@@ -135,19 +167,30 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.topView.selectedButtonType == RCDetailStatusTopViewButtonTypeCommend) {
-        RCCommentFrame * cmtFrame = self.commentFrames[indexPath.row];
-        return cmtFrame.cellHigth;
+        if (self.commentFrames.count) {
+            RCCommentFrame * cmtFrame = self.commentFrames[indexPath.row];
+            return cmtFrame.cellHigth;
+        }
+        return 0;
     } else{
-        RCCommentFrame * repost = self.repostFrames[indexPath.row];
-        return repost.cellHigth;
+        if (self.repostFrames.count) {
+            RCCommentFrame * repost = self.repostFrames[indexPath.row];
+            return repost.cellHigth;
+        }
+        return 0;
     }
 
+
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
 #pragma mark - RCDetailStatusToolBarDelegate
 - (void)detailStatusToolBar:(RCDetailStatusToolBar *)toolBar didClickedButtonType:(RCDetailStatusToolBarButtonType)buttonType{
     switch (buttonType) {
         case RCDetailStatusToolBarButtonTypeTransmit:
+            
             break;
         case RCDetailStatusToolBarButtonTypeEvaluate:
             
@@ -195,9 +238,10 @@
 - (void)loadTransmitData{
     RCTransmitParam * param = [RCTransmitParam param];
     param.ID = @([self.statusFrame.status.idstr longLongValue]);
-    RCRepost * repost = [self.repostFrames firstObject];
-    if (repost) {
-        param.since_id = @([repost.idstr longLongValue]);
+    RCCommentFrame * repostFrame = [self.repostFrames firstObject];
+    param.count = @100;
+    if (repostFrame) {
+        param.since_id = @([repostFrame.comment.idstr longLongValue]);
     }
     [RCStatusTool transmitWithParam:param success:^(RCTransmitResult *result) {
             NSIndexSet * set = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.reposts.count)];
@@ -219,9 +263,9 @@
 - (void)loadCommentData{
     RCCommentParam *param = [RCCommentParam param];
     param.ID = @([self.statusFrame.status.idstr longLongValue]);
-   RCComment * cmt = [self.commentFrames firstObject];
+   RCCommentFrame * cmt = [self.commentFrames firstObject];
     if (cmt) {
-        param.since_id = @([cmt.idstr longLongValue]);
+        param.since_id = @([cmt.comment.idstr longLongValue]);
     }
     [RCStatusTool commentWithParam:param success:^(RCCommentResult *result) {
         

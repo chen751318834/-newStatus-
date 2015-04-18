@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCStatusTextView : UITextView
 
+#define emetionNotificationName @"emetionNotificationName"
+#define emetionNotificationKey @"emetionNotificationKey"
+#define topicNotificationName @"topicNotificationName"
+#define topicNotificationKey @"topicNotificationKey"
+#define webPageNotificationName @"webPageNotificationName"
+#define webPageNotificationKey @"webPageNotificationKey"
+
+@class RCStatusTextView;
+
+@interface RCStatusTextView : UITextView
 @end

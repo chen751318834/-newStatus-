@@ -357,6 +357,9 @@
 		4BA3523B1AD3C0E500A2FCD5 /* RCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3523A1AD3C0E500A2FCD5 /* RCMeViewController.m */; };
 		4BA3523E1AD3C0FB00A2FCD5 /* RCMesageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3523D1AD3C0FB00A2FCD5 /* RCMesageViewController.m */; };
 		4BA7F66A1ADFB3BD00232EEF /* RCDetailStatusTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA7F6691ADFB3BD00232EEF /* RCDetailStatusTopView.m */; };
+		4BB09D501AE2106C00AEDEF9 /* RCEmetionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D4F1AE2106C00AEDEF9 /* RCEmetionController.m */; };
+		4BB09D531AE2107B00AEDEF9 /* RCTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D521AE2107B00AEDEF9 /* RCTopicViewController.m */; };
+		4BB09D561AE2108900AEDEF9 /* RCWebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D551AE2108900AEDEF9 /* RCWebPageViewController.m */; };
 		4BB2DFAC1AE0AAD7000D2B6E /* RCRepost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFAB1AE0AAD7000D2B6E /* RCRepost.m */; };
 		4BB2DFB01AE0CB0A000D2B6E /* RCDetailStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFAE1AE0CB0A000D2B6E /* RCDetailStatusCell.m */; };
 		4BB2DFB41AE0CD31000D2B6E /* RCCommentFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFB31AE0CD31000D2B6E /* RCCommentFrame.m */; };
@@ -900,6 +903,12 @@
 		4BA3523D1AD3C0FB00A2FCD5 /* RCMesageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMesageViewController.m; sourceTree = "<group>"; };
 		4BA7F6681ADFB3BD00232EEF /* RCDetailStatusTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDetailStatusTopView.h; sourceTree = "<group>"; };
 		4BA7F6691ADFB3BD00232EEF /* RCDetailStatusTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDetailStatusTopView.m; sourceTree = "<group>"; };
+		4BB09D4E1AE2106C00AEDEF9 /* RCEmetionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCEmetionController.h; sourceTree = "<group>"; };
+		4BB09D4F1AE2106C00AEDEF9 /* RCEmetionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCEmetionController.m; sourceTree = "<group>"; };
+		4BB09D511AE2107B00AEDEF9 /* RCTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTopicViewController.h; sourceTree = "<group>"; };
+		4BB09D521AE2107B00AEDEF9 /* RCTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopicViewController.m; sourceTree = "<group>"; };
+		4BB09D541AE2108900AEDEF9 /* RCWebPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCWebPageViewController.h; sourceTree = "<group>"; };
+		4BB09D551AE2108900AEDEF9 /* RCWebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCWebPageViewController.m; sourceTree = "<group>"; };
 		4BB2DFAA1AE0AAD7000D2B6E /* RCRepost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRepost.h; sourceTree = "<group>"; };
 		4BB2DFAB1AE0AAD7000D2B6E /* RCRepost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRepost.m; sourceTree = "<group>"; };
 		4BB2DFAD1AE0CB0A000D2B6E /* RCDetailStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDetailStatusCell.h; sourceTree = "<group>"; };
@@ -1651,6 +1660,7 @@
 		4BA1524F1ADBA5D00074B1E3 /* friendships(关注列表) */ = {
 			isa = PBXGroup;
 			children = (
+				4BB2DFB51AE0FFE8000D2B6E /* followers(粉丝) */,
 				4BE2340E1AE093AE00EA7482 /* tool */,
 				4BA152501ADBA5D00074B1E3 /* controller */,
 				4BA152511ADBA5D00074B1E3 /* model */,
@@ -1755,7 +1765,9 @@
 		4BA352171AD3C05F00A2FCD5 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				4BB2DFB51AE0FFE8000D2B6E /* followers(粉丝) */,
+				4BB09D421AE2105500AEDEF9 /* emetion(提到某人) */,
+				4BB09D461AE2105500AEDEF9 /* topic(话题) */,
+				4BB09D4A1AE2105500AEDEF9 /* webPage(网页) */,
 				4BA1524F1ADBA5D00074B1E3 /* friendships(关注列表) */,
 				4B9B634C1ADA83C000090D8D /* informSettting(通知设置) */,
 				4B9B63471ADA839800090D8D /* setting(设置) */,
@@ -1980,6 +1992,105 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		4BB09D421AE2105500AEDEF9 /* emetion(提到某人) */ = {
+			isa = PBXGroup;
+			children = (
+				4BB09D431AE2105500AEDEF9 /* controller */,
+				4BB09D441AE2105500AEDEF9 /* model */,
+				4BB09D451AE2105500AEDEF9 /* view */,
+			);
+			path = "emetion(提到某人)";
+			sourceTree = "<group>";
+		};
+		4BB09D431AE2105500AEDEF9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BB09D4E1AE2106C00AEDEF9 /* RCEmetionController.h */,
+				4BB09D4F1AE2106C00AEDEF9 /* RCEmetionController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BB09D441AE2105500AEDEF9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BB09D451AE2105500AEDEF9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BB09D461AE2105500AEDEF9 /* topic(话题) */ = {
+			isa = PBXGroup;
+			children = (
+				4BB09D471AE2105500AEDEF9 /* controller */,
+				4BB09D481AE2105500AEDEF9 /* model */,
+				4BB09D491AE2105500AEDEF9 /* view */,
+			);
+			path = "topic(话题)";
+			sourceTree = "<group>";
+		};
+		4BB09D471AE2105500AEDEF9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BB09D511AE2107B00AEDEF9 /* RCTopicViewController.h */,
+				4BB09D521AE2107B00AEDEF9 /* RCTopicViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BB09D481AE2105500AEDEF9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BB09D491AE2105500AEDEF9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BB09D4A1AE2105500AEDEF9 /* webPage(网页) */ = {
+			isa = PBXGroup;
+			children = (
+				4BB09D4B1AE2105500AEDEF9 /* controller */,
+				4BB09D4C1AE2105500AEDEF9 /* model */,
+				4BB09D4D1AE2105500AEDEF9 /* view */,
+			);
+			path = "webPage(网页)";
+			sourceTree = "<group>";
+		};
+		4BB09D4B1AE2105500AEDEF9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BB09D541AE2108900AEDEF9 /* RCWebPageViewController.h */,
+				4BB09D551AE2108900AEDEF9 /* RCWebPageViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4BB09D4C1AE2105500AEDEF9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4BB09D4D1AE2105500AEDEF9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		4BB2DFB51AE0FFE8000D2B6E /* followers(粉丝) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1988,7 +2099,8 @@
 				4BB2DFB81AE0FFE8000D2B6E /* tool */,
 				4BB2DFB91AE0FFE8000D2B6E /* view */,
 			);
-			path = "followers(粉丝)";
+			name = "followers(粉丝)";
+			path = "../followers(粉丝)";
 			sourceTree = "<group>";
 		};
 		4BB2DFB61AE0FFE8000D2B6E /* controller */ = {
@@ -2811,6 +2923,7 @@
 				4BB2DFC21AE100D6000D2B6E /* RCFollowerTool.m in Sources */,
 				4BE9F3D41ADFA6F8005A4379 /* RCOriginalStastusView.m in Sources */,
 				4BA7F66A1ADFB3BD00232EEF /* RCDetailStatusTopView.m in Sources */,
+				4BB09D561AE2108900AEDEF9 /* RCWebPageViewController.m in Sources */,
 				4BB2DFC81AE1022B000D2B6E /* RCFollower.m in Sources */,
 				4B49AB3E1ADA234000BC0580 /* HMCommonCenterItem.m in Sources */,
 				4B5379731AD765950032DF36 /* MJPhotoLoadingView.m in Sources */,
@@ -2823,6 +2936,7 @@
 				4B3752781AD6042B008DFE56 /* SDImageCache.m in Sources */,
 				4B61F6651AD8ECEF0018E8C2 /* MJArgument.m in Sources */,
 				4BE8CBCF1AD5254D00292996 /* AFURLSessionManager.m in Sources */,
+				4BB09D531AE2107B00AEDEF9 /* RCTopicViewController.m in Sources */,
 				4B49AB111ADA22F900BC0580 /* HWEmotionListView.m in Sources */,
 				4B5379791AD76E020032DF36 /* Foundation+Log.m in Sources */,
 				4B5379751AD765950032DF36 /* MJPhotoToolbar.m in Sources */,
@@ -2860,6 +2974,7 @@
 				4B61F66C1AD8ECEF0018E8C2 /* NSObject+MJKeyValue.m in Sources */,
 				4B263ED61ADA90F700A221BD /* DXPopover.m in Sources */,
 				4BB2DFB01AE0CB0A000D2B6E /* RCDetailStatusCell.m in Sources */,
+				4BB09D501AE2106C00AEDEF9 /* RCEmetionController.m in Sources */,
 				4BE9F3B01ADF4838005A4379 /* FMResultSet.m in Sources */,
 				4BC6E9731AD7735F009133BB /* RCStatusFrame.m in Sources */,
 				4BB2DFBC1AE0FFFA000D2B6E /* RCFollowerParam.m in Sources */,

@@ -75,33 +75,32 @@
 #pragma mark - 网络请求
 /**
  *  加载当前登录用户关注的微博列表
- */
-
-- (void)loadMoreFriendShips{
-    RCFriendshipsParam * param     = [[RCFriendshipsParam alloc]init];
-    param.access_token             = [RCAccountTool account].access_token;
-    param.uid                      = [[RCAccountTool account].uid longLongValue];
-    param.count                    = 100;
-    param.cursor                   = 3;
-
-    self.lastCursor++;
-
-    [RCFriendshipsTool frinedShipsWithparam:param success:^(RCFriendshipsResult *result) {
-        //        NSLog(@"%@",result);
-    NSIndexSet * set               = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.users.count)];
-        [self.friendShips insertObjects:result.users atIndexes:set];
-        //        [self.friendShips addObjectsFromArray:re sult.users];
-        [self.tableView reloadData];
-        [self.tableView footerEndRefreshing];
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-        [self.tableView footerEndRefreshing];
-
-    }];
-
-
-
-}
+// */
+//
+//- (void)loadMoreFriendShips{
+//    RCFriendshipsParam * param     = [[RCFriendshipsParam alloc]init];
+//    param.access_token             = [RCAccountTool account].access_token;
+//    param.uid                      = [[RCAccountTool account].uid longLongValue];
+//    param.count                    = 100;
+//    param.cursor                   = 3;
+//    RCUser *  = [self.friendShips firstObject];
+//   
+//    [RCFriendshipsTool frinedShipsWithparam:param success:^(RCFriendshipsResult *result) {
+//        //        NSLog(@"%@",result);
+//    NSIndexSet * set               = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.users.count)];
+//        [self.friendShips insertObjects:result.users atIndexes:set];
+//        //        [self.friendShips addObjectsFromArray:re sult.users];
+//        [self.tableView reloadData];
+//        [self.tableView footerEndRefreshing];
+//    } failure:^(NSError *error) {
+//        NSLog(@"%@",error);
+//        [self.tableView footerEndRefreshing];
+//
+//    }];
+//
+//
+//
+//}
 /**
  *  加载当前登录用户关注的微博列表
  */
@@ -112,12 +111,12 @@
     param.access_token             = [RCAccountTool account].access_token;
     param.uid                      = [[RCAccountTool account].uid longLongValue];
     param.count                    = 100;
-    param.cursor                   = self.lastCursor;
+    RCUser* user = [self.friendShips firstObject];
+    
+    param.cursor   = [user.idstr intValue];
     [RCFriendshipsTool frinedShipsWithparam:param success:^(RCFriendshipsResult *result) {
-        //        NSLog(@"%@",result);
     NSIndexSet * set               = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.users.count)];
         [self.friendShips insertObjects:result.users atIndexes:set];
-//        [self.friendShips addObjectsFromArray:re sult.users];
         [self.tableView reloadData];
         [self.tableView headerEndRefreshing];
     } failure:^(NSError *error) {

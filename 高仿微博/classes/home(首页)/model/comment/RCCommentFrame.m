@@ -18,8 +18,8 @@ static const CGFloat RCMargin = 10;
     //头像
     CGFloat iconX = RCMargin;
     CGFloat iconY = RCMargin;
-    CGFloat iconW = 40;
-    CGFloat iconH = 40;
+    CGFloat iconW = 35;
+    CGFloat iconH = 35;
     _iconViewF = CGRectMake(iconX, iconY, iconW, iconH);
     //用户名
     CGFloat userNameX = CGRectGetMaxX(_iconViewF)+RCMargin;
@@ -48,13 +48,13 @@ static const CGFloat RCMargin = 10;
     
     
     //微博发送时间
-    CGFloat  likeViewX = [UIScreen mainScreen].bounds.size.width - 20;
+    CGFloat  likeViewX = [UIScreen mainScreen].bounds.size.width - 40;
     CGFloat  likeViewY = userNameY +RCMargin/2;;
     CGFloat  likeViewW = 20;
     CGFloat  likeViewH = likeViewW;
         _likeViewF = CGRectMake(likeViewX, likeViewY, likeViewW,likeViewH);
     
-    _cellHigth = CGRectGetMaxY(_contentLabelF)+RCMargin;
+    _cellHigth = CGRectGetMaxY(_contentLabelF)+RCMargin*2;
 
 }
 @end

@@ -29,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"粉丝";
+    self.tableView.rowHeight = 60;
     [self loadFollowers];
     
 }
@@ -50,19 +51,26 @@
     return cell;
     
 }
+#pragma mark - Table view data delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+}
 #pragma mark - 网络请求
 #pragma mark  加载粉丝
 
 - (void)loadFollowers{
     RCFollowerParam * param = [RCFollowerParam param];
     param.uid = [[RCAccountTool account].uid longLongValue];
+    param.count = 100;
     [RCFollowerTool followersWithparam:param success:^(RCFollowerResult *result) {
         NSIndexSet * set = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.users.count)];
         [self.followers insertObjects:result.users atIndexes:set];
         [self.tableView reloadData];
     
     } failure:^(NSError *error) {
-    
+        NSLog(@"%@",error);
     }];
 
 }
