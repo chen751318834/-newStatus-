@@ -15,6 +15,8 @@
 #import "RCUser.h"
 #import "RCFriendshipsViewController.h"
 #import "RCFollowerViewController.h"
+#import "RCMeInfoViewController.h"
+#import "UIImage+RC.h"
 @interface RCMeViewController () <RCMeHeaderVIewDelegate>
 
 @end
@@ -24,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 40, 0);
-
     [self setUpHeaderView];
     // 设置导航栏
     [self setUpNavigationBar];
@@ -158,8 +159,8 @@
 }
 
 - (void)meHeaderVIewDidHeaderView:(RCMeHeaderVIew *)headerView{
-
-    NSLog(@"headerView");
+    
+    [self.navigationController pushViewController:[[RCMeInfoViewController alloc] init] animated:YES];
 
 }
 @end

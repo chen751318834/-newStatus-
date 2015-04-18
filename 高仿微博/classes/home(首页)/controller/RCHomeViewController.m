@@ -24,7 +24,8 @@
 #import "RCUserParam.h"
 #import "RCUserTool.h"
 #import "RCStatusDetailViewController.h"
-@interface RCHomeViewController ()
+#import "RCTopPopoverView.h"
+@interface RCHomeViewController () <RCTopPopoverViewDelegate>
 @property(nonatomic,weak) RCTitleButton * titleButton;
 /**
  *  存放微博数据，子控件的frame，cell的高度的数组
@@ -73,6 +74,8 @@
     self.navigationItem.leftBarButtonItem    = [UIBarButtonItem itemWithImage:@"navigationbar_friendsearch" higthligthImage:@"navigationbar_friendsearch_highlighted" targrt:self action:@selector(addFriend)];
 
     self.navigationItem.rightBarButtonItem   = [UIBarButtonItem itemWithImage:@"navigationbar_pop" higthligthImage:@"navigationbar_pop_highlighted" targrt:self action:@selector(sao)];
+    
+    
     RCTitleButton * titleButton              = [[RCTitleButton alloc]init];
     self.titleButton                         = titleButton;
     if ([RCAccountTool account].name) {
@@ -90,8 +93,16 @@
 - (void)addFriend{
 
 }
-
+#pragma mark 扫一扫
 - (void)sao{
+    RCTopPopoverView * popoverView                  = [[RCTopPopoverView alloc]initWithFrame:CGRectMake(0, 20, 130, 80) ];
+    popoverView.deleagte1 = self;
+    popoverView.backgroundColor                = [UIColor colorWithWhite:0.000 alpha:0.320];
+    DXPopover *popover                       = [DXPopover popover];
+    popover.maskType                         = DXPopoverMaskTypeNone;
+    popover.betweenAtViewAndArrowHeight = 15;
+    popover.cornerRadius = 2;
+    [popover showAtView:self.navigationItem.rightBarButtonItem.customView withContentView:popoverView];
 
 }
 - (void)initRefresh{
@@ -305,6 +316,20 @@
         }];
     }];
 
+
+}
+#pragma mark - RCTopPopoverViewDelegate
+- (void)topPopoverView:(RCTopPopoverView *)popoverView didClickedButtonType:(RCTopPopoverViewButtonType)buttonType{
+    switch (buttonType) {
+        case RCTopPopoverViewButtonTypeRefresh:
+            [self.tableView headerBeginRefreshing];
+            break;
+            
+        case RCTopPopoverViewButtonTypeSao:
+            NSLog(@"RCTopPopoverViewButtonTypeSao");
+
+            break;
+    }
 
 }
 @end

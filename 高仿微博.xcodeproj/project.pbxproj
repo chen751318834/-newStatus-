@@ -41,6 +41,7 @@
 		4B3752821AD6042B008DFE56 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3752711AD6042B008DFE56 /* UIImage+WebP.m */; };
 		4B3752831AD6042B008DFE56 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3752731AD6042B008DFE56 /* UIImageView+HighlightedWebCache.m */; };
 		4B3752841AD6042B008DFE56 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3752751AD6042B008DFE56 /* UIImageView+WebCache.m */; };
+		4B46CF341AE269550092E584 /* RCMeInfoCellTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CF331AE269550092E584 /* RCMeInfoCellTopView.m */; };
 		4B49AA231ADA22F900BC0580 /* d_aini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B49A9161ADA22F900BC0580 /* d_aini@2x.png */; };
 		4B49AA241ADA22F900BC0580 /* d_aoteman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B49A9171ADA22F900BC0580 /* d_aoteman@2x.png */; };
 		4B49AA251ADA22F900BC0580 /* d_baibai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B49A9181ADA22F900BC0580 /* d_baibai@2x.png */; };
@@ -360,6 +361,18 @@
 		4BB09D501AE2106C00AEDEF9 /* RCEmetionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D4F1AE2106C00AEDEF9 /* RCEmetionController.m */; };
 		4BB09D531AE2107B00AEDEF9 /* RCTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D521AE2107B00AEDEF9 /* RCTopicViewController.m */; };
 		4BB09D561AE2108900AEDEF9 /* RCWebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D551AE2108900AEDEF9 /* RCWebPageViewController.m */; };
+		4BB09D591AE219AF00AEDEF9 /* RCTopicParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D581AE219AF00AEDEF9 /* RCTopicParam.m */; };
+		4BB09D5C1AE219F100AEDEF9 /* RCTopicResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D5B1AE219F100AEDEF9 /* RCTopicResult.m */; };
+		4BB09D601AE21A1000AEDEF9 /* RCTopicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D5F1AE21A1000AEDEF9 /* RCTopicTool.m */; };
+		4BB09D631AE21A8900AEDEF9 /* RCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D621AE21A8900AEDEF9 /* RCTopic.m */; };
+		4BB09D661AE225E100AEDEF9 /* RCTopPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D651AE225E100AEDEF9 /* RCTopPopoverView.m */; };
+		4BB09D6C1AE2468800AEDEF9 /* UINavigationBar+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D6B1AE2468800AEDEF9 /* UINavigationBar+Extension.m */; };
+		4BB09D6F1AE247F500AEDEF9 /* RCMeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D6E1AE247F500AEDEF9 /* RCMeInfoViewController.m */; };
+		4BB09D721AE2538A00AEDEF9 /* RCMeInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D711AE2538A00AEDEF9 /* RCMeInfoHeaderView.m */; };
+		4BB09D751AE255CB00AEDEF9 /* RCMeInfoTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D741AE255CB00AEDEF9 /* RCMeInfoTopView.m */; };
+		4BB09D771AE2561100AEDEF9 /* RCMeInfoTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB09D761AE2561100AEDEF9 /* RCMeInfoTopView.xib */; };
+		4BB09D7A1AE25C8D00AEDEF9 /* UIImage+RC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB09D791AE25C8D00AEDEF9 /* UIImage+RC.m */; };
+		4BB09D7C1AE265A500AEDEF9 /* RCMeInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB09D7B1AE265A500AEDEF9 /* RCMeInfoHeaderView.xib */; };
 		4BB2DFAC1AE0AAD7000D2B6E /* RCRepost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFAB1AE0AAD7000D2B6E /* RCRepost.m */; };
 		4BB2DFB01AE0CB0A000D2B6E /* RCDetailStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFAE1AE0CB0A000D2B6E /* RCDetailStatusCell.m */; };
 		4BB2DFB41AE0CD31000D2B6E /* RCCommentFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB2DFB31AE0CD31000D2B6E /* RCCommentFrame.m */; };
@@ -511,6 +524,8 @@
 		4B3752731AD6042B008DFE56 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		4B3752741AD6042B008DFE56 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		4B3752751AD6042B008DFE56 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		4B46CF321AE269550092E584 /* RCMeInfoCellTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMeInfoCellTopView.h; path = ../../../../../../../../../Users/apple/Documents/RCMeInfoCellTopView.h; sourceTree = "<group>"; };
+		4B46CF331AE269550092E584 /* RCMeInfoCellTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMeInfoCellTopView.m; path = ../../../../../../../../../Users/apple/Documents/RCMeInfoCellTopView.m; sourceTree = "<group>"; };
 		4B49A9161ADA22F900BC0580 /* d_aini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "d_aini@2x.png"; sourceTree = "<group>"; };
 		4B49A9171ADA22F900BC0580 /* d_aoteman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "d_aoteman@2x.png"; sourceTree = "<group>"; };
 		4B49A9181ADA22F900BC0580 /* d_baibai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "d_baibai@2x.png"; sourceTree = "<group>"; };
@@ -909,6 +924,28 @@
 		4BB09D521AE2107B00AEDEF9 /* RCTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopicViewController.m; sourceTree = "<group>"; };
 		4BB09D541AE2108900AEDEF9 /* RCWebPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCWebPageViewController.h; sourceTree = "<group>"; };
 		4BB09D551AE2108900AEDEF9 /* RCWebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCWebPageViewController.m; sourceTree = "<group>"; };
+		4BB09D571AE219AF00AEDEF9 /* RCTopicParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTopicParam.h; sourceTree = "<group>"; };
+		4BB09D581AE219AF00AEDEF9 /* RCTopicParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopicParam.m; sourceTree = "<group>"; };
+		4BB09D5A1AE219F100AEDEF9 /* RCTopicResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTopicResult.h; sourceTree = "<group>"; };
+		4BB09D5B1AE219F100AEDEF9 /* RCTopicResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopicResult.m; sourceTree = "<group>"; };
+		4BB09D5E1AE21A1000AEDEF9 /* RCTopicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTopicTool.h; sourceTree = "<group>"; };
+		4BB09D5F1AE21A1000AEDEF9 /* RCTopicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopicTool.m; sourceTree = "<group>"; };
+		4BB09D611AE21A8900AEDEF9 /* RCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTopic.h; sourceTree = "<group>"; };
+		4BB09D621AE21A8900AEDEF9 /* RCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopic.m; sourceTree = "<group>"; };
+		4BB09D641AE225E100AEDEF9 /* RCTopPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTopPopoverView.h; sourceTree = "<group>"; };
+		4BB09D651AE225E100AEDEF9 /* RCTopPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTopPopoverView.m; sourceTree = "<group>"; };
+		4BB09D6A1AE2468800AEDEF9 /* UINavigationBar+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Extension.h"; sourceTree = "<group>"; };
+		4BB09D6B1AE2468800AEDEF9 /* UINavigationBar+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Extension.m"; sourceTree = "<group>"; };
+		4BB09D6D1AE247F500AEDEF9 /* RCMeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMeInfoViewController.h; sourceTree = "<group>"; };
+		4BB09D6E1AE247F500AEDEF9 /* RCMeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMeInfoViewController.m; sourceTree = "<group>"; };
+		4BB09D701AE2538A00AEDEF9 /* RCMeInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMeInfoHeaderView.h; path = "高仿微博/classes/me(我)/controller/RCMeInfoHeaderView.h"; sourceTree = SOURCE_ROOT; };
+		4BB09D711AE2538A00AEDEF9 /* RCMeInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMeInfoHeaderView.m; path = "高仿微博/classes/me(我)/controller/RCMeInfoHeaderView.m"; sourceTree = SOURCE_ROOT; };
+		4BB09D731AE255CB00AEDEF9 /* RCMeInfoTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMeInfoTopView.h; path = "高仿微博/classes/me(我)/controller/RCMeInfoTopView.h"; sourceTree = SOURCE_ROOT; };
+		4BB09D741AE255CB00AEDEF9 /* RCMeInfoTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMeInfoTopView.m; path = "高仿微博/classes/me(我)/controller/RCMeInfoTopView.m"; sourceTree = SOURCE_ROOT; };
+		4BB09D761AE2561100AEDEF9 /* RCMeInfoTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RCMeInfoTopView.xib; path = ../../../../../../../../../Users/apple/Documents/RCMeInfoTopView.xib; sourceTree = "<group>"; };
+		4BB09D781AE25C8D00AEDEF9 /* UIImage+RC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RC.h"; sourceTree = "<group>"; };
+		4BB09D791AE25C8D00AEDEF9 /* UIImage+RC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RC.m"; sourceTree = "<group>"; };
+		4BB09D7B1AE265A500AEDEF9 /* RCMeInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RCMeInfoHeaderView.xib; path = ../../../../../../../../../Users/apple/Documents/RCMeInfoHeaderView.xib; sourceTree = "<group>"; };
 		4BB2DFAA1AE0AAD7000D2B6E /* RCRepost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRepost.h; sourceTree = "<group>"; };
 		4BB2DFAB1AE0AAD7000D2B6E /* RCRepost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCRepost.m; sourceTree = "<group>"; };
 		4BB2DFAD1AE0CB0A000D2B6E /* RCDetailStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDetailStatusCell.h; sourceTree = "<group>"; };
@@ -1582,6 +1619,8 @@
 		4B63BC641AD3D40B001462E9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4BB09D781AE25C8D00AEDEF9 /* UIImage+RC.h */,
+				4BB09D791AE25C8D00AEDEF9 /* UIImage+RC.m */,
 				4B5379781AD76E020032DF36 /* Foundation+Log.m */,
 				4B63BC651AD3D4B9001462E9 /* UIView+Extension.h */,
 				4B63BC661AD3D4B9001462E9 /* UIView+Extension.m */,
@@ -1591,6 +1630,8 @@
 				4B21F2501AD666CF007CEAEF /* NSDate+RC.m */,
 				4B61F6711AD8F7410018E8C2 /* UIButton+Extension.h */,
 				4B61F6721AD8F7410018E8C2 /* UIButton+Extension.m */,
+				4BB09D6A1AE2468800AEDEF9 /* UINavigationBar+Extension.h */,
+				4BB09D6B1AE2468800AEDEF9 /* UINavigationBar+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1916,6 +1957,8 @@
 			children = (
 				4BA352391AD3C0E500A2FCD5 /* RCMeViewController.h */,
 				4BA3523A1AD3C0E500A2FCD5 /* RCMeViewController.m */,
+				4BB09D6D1AE247F500AEDEF9 /* RCMeInfoViewController.h */,
+				4BB09D6E1AE247F500AEDEF9 /* RCMeInfoViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1933,6 +1976,14 @@
 				4B9B63381ADA68B900090D8D /* RCMeHeaderVIew.h */,
 				4B9B63391ADA68B900090D8D /* RCMeHeaderVIew.m */,
 				4B263EF41ADA9A3D00A221BD /* RCMeHeaderVIew.xib */,
+				4BB09D701AE2538A00AEDEF9 /* RCMeInfoHeaderView.h */,
+				4BB09D711AE2538A00AEDEF9 /* RCMeInfoHeaderView.m */,
+				4BB09D7B1AE265A500AEDEF9 /* RCMeInfoHeaderView.xib */,
+				4BB09D731AE255CB00AEDEF9 /* RCMeInfoTopView.h */,
+				4BB09D741AE255CB00AEDEF9 /* RCMeInfoTopView.m */,
+				4BB09D761AE2561100AEDEF9 /* RCMeInfoTopView.xib */,
+				4B46CF321AE269550092E584 /* RCMeInfoCellTopView.h */,
+				4B46CF331AE269550092E584 /* RCMeInfoCellTopView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -2028,6 +2079,7 @@
 		4BB09D461AE2105500AEDEF9 /* topic(话题) */ = {
 			isa = PBXGroup;
 			children = (
+				4BB09D5D1AE21A0300AEDEF9 /* tool */,
 				4BB09D471AE2105500AEDEF9 /* controller */,
 				4BB09D481AE2105500AEDEF9 /* model */,
 				4BB09D491AE2105500AEDEF9 /* view */,
@@ -2047,6 +2099,12 @@
 		4BB09D481AE2105500AEDEF9 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4BB09D571AE219AF00AEDEF9 /* RCTopicParam.h */,
+				4BB09D581AE219AF00AEDEF9 /* RCTopicParam.m */,
+				4BB09D5A1AE219F100AEDEF9 /* RCTopicResult.h */,
+				4BB09D5B1AE219F100AEDEF9 /* RCTopicResult.m */,
+				4BB09D611AE21A8900AEDEF9 /* RCTopic.h */,
+				4BB09D621AE21A8900AEDEF9 /* RCTopic.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -2089,6 +2147,15 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		4BB09D5D1AE21A0300AEDEF9 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				4BB09D5E1AE21A1000AEDEF9 /* RCTopicTool.h */,
+				4BB09D5F1AE21A1000AEDEF9 /* RCTopicTool.m */,
+			);
+			path = tool;
 			sourceTree = "<group>";
 		};
 		4BB2DFB51AE0FFE8000D2B6E /* followers(粉丝) */ = {
@@ -2466,6 +2533,8 @@
 				4BE9F3D01ADFA6F8005A4379 /* RCTitleButton.m */,
 				4BE9F3D11ADFA6F8005A4379 /* RCToolBar.h */,
 				4BE9F3D21ADFA6F8005A4379 /* RCToolBar.m */,
+				4BB09D641AE225E100AEDEF9 /* RCTopPopoverView.h */,
+				4BB09D651AE225E100AEDEF9 /* RCTopPopoverView.m */,
 			);
 			path = homeStatus;
 			sourceTree = "<group>";
@@ -2691,6 +2760,7 @@
 				4B49AAD21ADA22F900BC0580 /* lxh_oye.gif in Resources */,
 				4B49AA471ADA22F900BC0580 /* d_shengbing@2x.png in Resources */,
 				4B9B63371ADA574E00090D8D /* newses.plist in Resources */,
+				4BB09D771AE2561100AEDEF9 /* RCMeInfoTopView.xib in Resources */,
 				4B49AACF1ADA22F900BC0580 /* lxh_meigui.png in Resources */,
 				4B49AB051ADA22F900BC0580 /* lxh_zaokuangzheng@2x.png in Resources */,
 				4B49AA4B1ADA22F900BC0580 /* d_shuijiao@2x.png in Resources */,
@@ -2770,6 +2840,7 @@
 				4B49AA651ADA22F900BC0580 /* f_v5@2x.png in Resources */,
 				4B49AA761ADA22F900BC0580 /* o_huatong@2x.png in Resources */,
 				4B49AA6B1ADA22F900BC0580 /* h_lai@2x.png in Resources */,
+				4BB09D7C1AE265A500AEDEF9 /* RCMeInfoHeaderView.xib in Resources */,
 				4B49AA8F1ADA22F900BC0580 /* compose_keyboard_dot_selected@2x.png in Resources */,
 				4B49AA591ADA22F900BC0580 /* d_youhengheng@2x.png in Resources */,
 				4B49AB091ADA22F900BC0580 /* lxh_zhuanfa.gif in Resources */,
@@ -2831,6 +2902,7 @@
 				4B1A39A71AD4BB560046CA12 /* RCNewFeatureViewController.m in Sources */,
 				4B49AB3D1ADA234000BC0580 /* HMCommonCell.m in Sources */,
 				4BE9F3D51ADFA6F8005A4379 /* RCPhotosView.m in Sources */,
+				4BB09D6C1AE2468800AEDEF9 /* UINavigationBar+Extension.m in Sources */,
 				4BB2DFBF1AE10029000D2B6E /* RCFollowerResult.m in Sources */,
 				4BE8CB5D1AD4EC4400292996 /* RCNetWorkingTool.m in Sources */,
 				4BE9F3AF1ADF4838005A4379 /* FMDatabaseQueue.m in Sources */,
@@ -2850,8 +2922,10 @@
 				4BA152651ADBC0030074B1E3 /* RCSearchFriendsResultViewController.m in Sources */,
 				4B49AB391ADA234000BC0580 /* HMBadgeView.m in Sources */,
 				4B49AB101ADA22F900BC0580 /* HWEmotionKeyboard.m in Sources */,
+				4BB09D661AE225E100AEDEF9 /* RCTopPopoverView.m in Sources */,
 				4BC6E9711AD7735F009133BB /* RCPhoto.m in Sources */,
 				4B3752841AD6042B008DFE56 /* UIImageView+WebCache.m in Sources */,
+				4BB09D7A1AE25C8D00AEDEF9 /* UIImage+RC.m in Sources */,
 				4B49AB0E1ADA22F900BC0580 /* HWEmotionAttachment.m in Sources */,
 				4B37527B1AD6042B008DFE56 /* SDWebImageDownloader.m in Sources */,
 				4BE234211AE097CB00EA7482 /* RCTransmitResult.m in Sources */,
@@ -2867,6 +2941,7 @@
 				4B3752811AD6042B008DFE56 /* UIImage+MultiFormat.m in Sources */,
 				4BC6E97C1AD77476009133BB /* RCUserInfoResult.m in Sources */,
 				4B5379721AD765950032DF36 /* MJPhotoBrowser.m in Sources */,
+				4BB09D5C1AE219F100AEDEF9 /* RCTopicResult.m in Sources */,
 				4BA352321AD3C0A500A2FCD5 /* RCNavigationController.m in Sources */,
 				4B9B632B1ADA506900090D8D /* RCDisCoverHeaderView.m in Sources */,
 				4B9B634B1ADA839800090D8D /* RCSettingViewController.m in Sources */,
@@ -2876,9 +2951,11 @@
 				4B61F6681AD8ECEF0018E8C2 /* MJMethod.m in Sources */,
 				4BA152551ADBA5FC0074B1E3 /* RCFriendshipsViewController.m in Sources */,
 				4B3752771AD6042B008DFE56 /* NSData+ImageContentType.m in Sources */,
+				4BB09D6F1AE247F500AEDEF9 /* RCMeInfoViewController.m in Sources */,
 				4B61F6691AD8ECEF0018E8C2 /* MJType.m in Sources */,
 				4BE9F3DA1ADFA6F8005A4379 /* RCStatusView.m in Sources */,
 				4B9B633A1ADA68B900090D8D /* RCMeHeaderVIew.m in Sources */,
+				4BB09D631AE21A8900AEDEF9 /* RCTopic.m in Sources */,
 				4BE234141AE0946200EA7482 /* RCCommentParam.m in Sources */,
 				4BE9F3DC1ADFA6F8005A4379 /* RCToolBar.m in Sources */,
 				4BE9F3BC1ADF92E1005A4379 /* RCStatusDetailViewController.m in Sources */,
@@ -2890,6 +2967,7 @@
 				4BE8CB6A1AD4F04000292996 /* RCOauthTool.m in Sources */,
 				4B49AB0F1ADA22F900BC0580 /* HWEmotionButton.m in Sources */,
 				4B49AB421ADA234000BC0580 /* HMCommonSwitchItem.m in Sources */,
+				4B46CF341AE269550092E584 /* RCMeInfoCellTopView.m in Sources */,
 				4BA352381AD3C0D600A2FCD5 /* RCHomeViewController.m in Sources */,
 				4BC6E9A61AD7E63D009133BB /* RCSendStatusViewController.m in Sources */,
 				4BE9F3DF1ADFA71A005A4379 /* RCDetailStatusToolBar.m in Sources */,
@@ -2916,13 +2994,17 @@
 				4B49AB401ADA234000BC0580 /* HMCommonItem.m in Sources */,
 				4BC6E99D1AD7E5C0009133BB /* RCComposeButton.m in Sources */,
 				4BC6E9741AD7735F009133BB /* RCStatusParam.m in Sources */,
+				4BB09D751AE255CB00AEDEF9 /* RCMeInfoTopView.m in Sources */,
 				4BA3523B1AD3C0E500A2FCD5 /* RCMeViewController.m in Sources */,
 				4BA351EE1AD3BE9C00A2FCD5 /* AppDelegate.m in Sources */,
+				4BB09D591AE219AF00AEDEF9 /* RCTopicParam.m in Sources */,
 				4BB2DFC51AE10192000D2B6E /* RCFollowerViewController.m in Sources */,
 				4BE8CBC81AD5254D00292996 /* AFHTTPRequestOperationManager.m in Sources */,
 				4BB2DFC21AE100D6000D2B6E /* RCFollowerTool.m in Sources */,
 				4BE9F3D41ADFA6F8005A4379 /* RCOriginalStastusView.m in Sources */,
 				4BA7F66A1ADFB3BD00232EEF /* RCDetailStatusTopView.m in Sources */,
+				4BB09D601AE21A1000AEDEF9 /* RCTopicTool.m in Sources */,
+				4BB09D721AE2538A00AEDEF9 /* RCMeInfoHeaderView.m in Sources */,
 				4BB09D561AE2108900AEDEF9 /* RCWebPageViewController.m in Sources */,
 				4BB2DFC81AE1022B000D2B6E /* RCFollower.m in Sources */,
 				4B49AB3E1ADA234000BC0580 /* HMCommonCenterItem.m in Sources */,
